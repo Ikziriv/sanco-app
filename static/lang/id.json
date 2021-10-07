@@ -1,0 +1,93 @@
+{
+    "app_title": {
+        "index": "Sanco IOT Solution"
+    },
+    "global": {
+        "txt_one": "Kami menyediakan solusi produk inovatif untuk kemajuan berkelanjutan Tim profesional kami bekerja untuk meningkatkan produktivitas dan efektivitas biaya di pasar."
+    },
+    "nav": {
+        "home": "Home",
+        "product": "Produk",
+        "blog": "Blog",
+        "brochure": "E-Brosur",
+        "exhibition": "Pameran",
+        "contact": "Kontak",
+        "login": "Masuk"
+    },
+    "home": {
+        "sec_hero": {
+            "title": "Solusi Teknik Industri",
+            "subtitle": "Kami menyediakan solusi produk inovatif untuk kemajuan berkelanjutan Tim profesional kami bekerja untuk meningkatkan produktivitas dan efektivitas biaya di pasar.",
+            "btn": "Lebih Lanjut"
+        },
+        "sec_welcome": {
+            "title": "Selamat datang pengunjung kami",
+            "subtitle": "Bicaralah dengan kami untuk menemukan solusi yang tepat untuk kebutuhan industri IOT Anda.",
+            "side_left_title": "Pengunjung Indonesia",
+            "side_left_subtitle": "Jika Anda adalah pengunjung domestik, bagian ini untuk Anda, silakan masuk, semua produk untuk pelanggan lokal",
+            "side_right_title": "Pengunjung Luar Negeri",
+            "side_right_subtitle": "Jika Anda adalah pengunjung luar negeri, bagian ini untuk Anda, silakan masuk, semua produk untuk pelanggan luar negeri"
+        },
+        "sec_exhibition": {
+            "title": "Daftar Pameran",
+            "subtitle": "\"Jangan lewatkan\" kunjungi pameran kami dan dapatkan penawaran menarik dari kami, semua penawaran yang kami berikan akan menjadi keuntungan anda"
+        }
+    },
+    "product": {
+        "nav": {
+            "home": "Home",
+            "product": "Produk"
+        },
+        "title": "Produk"
+    },
+    "brochure": {
+        "nav": {
+            "home": "Home",
+            "brochure": "Brosur"
+        },
+        "title": "Brosur"
+    },
+    "exhibition": {
+        "nav": {
+            "home": "Home",
+            "exhibition": "Pameran"
+        },
+        "title": "Pameran"
+    },
+    "contact": {
+        "nav": {
+            "home": "Home",
+            "exhibition": "Kontak"
+        },
+        "title": "Kontak",
+        "section": {
+            "title": "SANCO KONTAK",
+            "subtitle": "Berhubungan! Staf, distributor, dan mitra kami siap membantu.",
+            "follow": "IKUTI KAMI",
+            "head_off": "Kantor Pusat",
+            "head_branch_one": "Kantor Cabang",
+            "head_branch_two": "Kantor Cabang",
+            "btn": "Selengkapnya"
+        }
+    },
+    "footer": {
+        "cpyh": "Sanco Indonesia",
+        "title": "PT Sanco Indonesia",
+        "subtitle": "Solusi Teknik Industri",
+        "head_off": "Kantor Pusat",
+        "product": "Produk",
+        "solution": "Solusi",
+        "site_map": "Peta Situs"
+    },
+    "messages": {
+        "error": "Error: {status}",
+        "success": "Sukses, bagus!",
+        "high_five": "High five",
+        "try_editing": "Try editing this file (src/routes/index.svelte) to test live reloading."
+    },
+    "languages": {
+        "id": "Indonesia",
+        "en": "English"
+    },
+    "direction": "ltr"
+}

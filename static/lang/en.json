@@ -1,0 +1,93 @@
+{
+    "app_title": {
+        "index": "Sanco IOT Solution"
+    },
+    "global": {
+        "txt_one": "We provide innovative product solutions for sustainable progress Our professional team works to increase productivity and cost effectiveness on the market."
+    },
+    "nav": {
+        "home": "Home",
+        "product": "Product",
+        "blog": "Blog",
+        "brochure": "E-Brochure",
+        "exhibition": "Exhibition",
+        "contact": "Contact",
+        "login": "Login"
+    },
+    "home": {
+        "sec_hero": {
+            "title": "Industrial Engineering Solutions",
+            "subtitle": "We provide innovative product solutions for sustainable progress Our professional team works to increase productivity and cost effectiveness on the market.",
+            "btn": "Learn More"
+        },
+        "sec_welcome": {
+            "title": "Welcome our visitors",
+            "subtitle": "Talk to us to find the right solution for your IOT industry's requirements.",
+            "side_left_title": "Indonesia Visitor",
+            "side_left_subtitle": "If you are a domestic visitor, this section is for you, please sign in, all products for local customers",
+            "side_right_title": "Overeas Visitor",
+            "side_right_subtitle": "If you are an overseas visitor, this section is for you, please sign in, all products for overseas customers"
+        },
+        "sec_exhibition": {
+            "title": "Exhibitons List",
+            "subtitle": "\"Don't miss it\" visit our exhibition and get interesting offers from us, all the offers we provide will be your advantage"
+        }
+    },
+    "product": {
+        "nav": {
+            "home": "Home",
+            "product": "Product"
+        },
+        "title": "Product"
+    },
+    "brochure": {
+        "nav": {
+            "home": "Home",
+            "brochure": "Brochure"
+        },
+        "title": "Brochure"
+    },
+    "exhibition": {
+        "nav": {
+            "home": "Home",
+            "exhibition": "Exibition"
+        },
+        "title": "Exibition"
+    },
+    "contact": {
+        "nav": {
+            "home": "Home",
+            "exhibition": "Contact"
+        },
+        "title": "Contact",
+        "section": {
+            "title": "SANCO CONTACT",
+            "subtitle": "Get in touch! Our staff, distributors and partners are here to help.",
+            "follow": "FOLLOW US",
+            "head_off": "Head Office",
+            "head_branch_one": "Branch Office",
+            "head_branch_two": "Branch Office",
+            "btn": "More Contact"
+        }
+    },
+    "footer": {
+        "cpyh": "Sanco Indonesia",
+        "title": "PT Sanco Indonesia",
+        "subtitle": "Industrial Engineering Solution",
+        "head_off": "Head Office",
+        "product": "Products",
+        "solution": "Solutions",
+        "site_map": "Site Map"
+    },
+    "messages": {
+        "error": "Error: {status}",
+        "success": "Great success!",
+        "high_five": "High five",
+        "try_editing": "Try editing this file (src/routes/index.svelte) to test live reloading."
+    },
+    "languages": {
+        "en": "English",
+        "id": "Indonesia"
+    },
+    "direction": "ltr"
+}
