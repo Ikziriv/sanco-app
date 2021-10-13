@@ -87,3 +87,61 @@
 		</div>
 	</div>
 </section>
+
+<section class="body-font">
+	<div
+		class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
+	>
+		<div class="grid gap-5 row-gap-8 grid-cols-1">
+			<div class="flex flex-col justify-center">
+				<div class="grid gap-5 row-gap-8 grid-cols-2">
+					<div
+						class="bg-white border-l-4 shadow-sm border-amber-500 hover:border-amber-700 hover:shadow-lg"
+					>
+						<div class="h-full p-5 border border-l-0 rounded-r">
+							<h6 class="mb-2 font-bold leading-5">Cosy</h6>
+							<p class="text-sm text-gray-900">
+								Cosy+ for secure industrial remote access, Successful connectivity for all your
+								machines with Cosy+ The new generation of remote access gateway.
+							</p>
+						</div>
+					</div>
+					<div
+						class="bg-white border-l-4 shadow-sm border-amber-500 hover:border-amber-700 hover:shadow-lg"
+					>
+						<div class="h-full p-5 border border-l-0 rounded-r">
+							<h6 class="mb-2 font-bold leading-5">Flexy</h6>
+							<p class="text-sm text-gray-900">
+								Ewon Flexy - give life to all your IIoT projects!, unlock the data of your machines
+								to enable remote monitoring, predictive maintenance and other value-added services.
+							</p>
+						</div>
+					</div>
+					<div
+						class="bg-white border-l-4 shadow-sm border-amber-500 hover:border-amber-700 hover:shadow-lg"
+					>
+						<div class="h-full p-5 border border-l-0 rounded-r">
+							<h6 class="mb-2 font-bold leading-5">Talk2M</h6>
+							<p class="text-sm text-gray-900">
+								Secure Machine Connectivity, Wherever you Want, Discover Talk2M, a scalable,
+								reliable, and fully redundant Industrial Cloud. With servers spread around the
+								globe, it enables our customers to access their assets wherever they are.
+							</p>
+						</div>
+					</div>
+					<div
+						class="bg-white border-l-4 shadow-sm border-amber-500 hover:border-amber-700 hover:shadow-lg"
+					>
+						<div class="h-full p-5 border border-l-0 rounded-r">
+							<h6 class="mb-2 font-bold leading-5">Netbiter – Argos</h6>
+							<p class="text-sm text-gray-900">
+								Manage power generators online!, netbiter enables you to remotely monitor and
+								control power generators. Get full insight from anywhere!
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

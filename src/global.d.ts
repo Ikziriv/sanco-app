@@ -1,5 +1,8 @@
 /// <reference types="@sveltejs/kit" />
+/// <reference types="svelte" />
+/// <reference types="vite/client" />
 
+declare module 'svelte-swipe';
 //#region Ensure image file endings have a type for TypeScript
 /**
  * These declarations tell TypeScript that we allow import of images, e.g.

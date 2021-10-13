@@ -224,12 +224,50 @@
 			</div>
 		</div>
 
-		<div class="col-span-2 md:col-span-1 bg-white px-8 py-8">
-			<div class="flex flex-col w-full h-auto relative">
-				<img
-					src="https://www.netbiter.com/images/default-source/applications/genset-whitepaper_mockup.jpg?sfvrsn=8cc3c5d6_6"
-					alt=""
-				/>
+		<div class="col-span-2 md:col-span-1 bg-white shadow-lg rounded-md px-10 py-8">
+			<div class="flex flex-col w-full">
+				<div class="w-full h-auto mb-8">
+					<div class="flex flex-col">
+						<span class="text-2xl font-semibold uppercase">Free whitepaper </span>
+						<div class="text-2xl font-thin">
+							<p>
+								Three ways to reduce operating costs of power generators with remote management.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="w-full h-auto">
+					<img
+						src="https://www.netbiter.com/images/default-source/applications/genset-whitepaper_mockup.jpg?sfvrsn=8cc3c5d6_6"
+						alt=""
+					/>
+				</div>
+				<div class="mt-16 py-8">
+					<div class="grid grid-cols-2">
+						<a
+							target="_blank"
+							href="https://www.netbiter.com/applications/power-generators-ups/powergen-whitepaper"
+							class="col-span-2 md:col-span-1 w-full flex justify-between bg-transparent border border-sky-900 bg-sky-900 px-8 py-7"
+						>
+							<span class="font-semibold text-white">Download Whitepaper</span>
+							<div>
+								<svg
+									class="w-6 h-6 ml-1 text-white"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+									xmlns="http://www.w3.org/2000/svg"
+									><path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M9 5l7 7-7 7"
+									/></svg
+								>
+							</div>
+						</a>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

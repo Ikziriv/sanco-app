@@ -54,7 +54,7 @@
 						<h2
 							class="max-w-lg mt-0 font-sans text-5xl font-bold tracking-tight text-white sm:leading-none"
 						>
-							Exibition <br class="hidden md:block" />
+							Exhibition <br class="hidden md:block" />
 						</h2>
 						<p class="max-w-xl mt-4 mb-8 text-base text-gray-200">
 							We provide innovative product solutions for sustainable progress <br
