@@ -2,7 +2,7 @@
 	import PollStore from '../../../lib/stores/poll';
 	import { fade, scale } from 'svelte/transition';
 	import { flip } from 'svelte/animate';
-	import PollDetails from './PollDetails.svelte';
+	import Detail from './Detail.svelte';
 </script>
 
 <div class="grid grid-cols-1">
@@ -11,7 +11,7 @@
 			<!-- By calling the store here we don't need to use lifecycle hooks: onMount & onDestroy -->
 			{#each $PollStore as poll (poll.id)}
 				<div in:fade out:scale|local animate:flip={{ duration: 500 }}>
-					<PollDetails {poll} />
+					<!-- <Detail {poll} /> -->
 				</div>
 			{/each}
 		</div>

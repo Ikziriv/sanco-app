@@ -5,7 +5,7 @@
 </script>
 
 <svelte:head>
-	<title>IOT Sanco Indonesia | Exibition</title>
+	<title>IOT Solution Indonesia | Exibition</title>
 </svelte:head>
 
 <section class="body-font">

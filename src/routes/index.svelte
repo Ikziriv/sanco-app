@@ -28,7 +28,7 @@
 </script>
 
 <svelte:head>
-	<title>Sanco IOT Indonesia | Home</title>
+	<title>IOT Solution Indonesia | Home</title>
 </svelte:head>
 
 <section class="body-font">

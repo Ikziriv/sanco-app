@@ -1,7 +1,7 @@
 <script>
 	import { supabase } from '$lib/supabase';
-	import Tabs from './shared/Tabs.svelte';
-	import PollList from './components/PollList.svelte';
+	import Tabs from '../../components/global/Tabs.svelte';
+	import PollList from '../../components/frontend/poll/List.svelte';
 	// Tabs
 	let items = ['Polling Progress', 'Add New Poll'];
 	let activeItem = 'Polling Progress';

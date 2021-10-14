@@ -11,7 +11,7 @@
 </script>
 
 <svelte:head>
-	<title>IOT Sanco Indonesia | Brochure</title>
+	<title>IOT Solution Indonesia | Brochure</title>
 </svelte:head>
 
 <section class="body-font">

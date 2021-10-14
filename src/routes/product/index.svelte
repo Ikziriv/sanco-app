@@ -1,11 +1,12 @@
 <script>
 	// import supabase from '$lib/supabase';
 	import Field from '../../components/frontend/Field.svelte';
+	import AccroProduct from '../../components/frontend/accrodiontype/AccroProduct.svelte';
 	let search = '';
 </script>
 
 <svelte:head>
-	<title>IOT Sanco Indonesia | Product</title>
+	<title>IOT Solution Indonesia | Product</title>
 </svelte:head>
 
 <section class="body-font">
@@ -88,9 +89,10 @@
 	</div>
 </section>
 
-<section class="body-font">
+<section class="body-font py-4">
+	<AccroProduct imgsrc="/img/hms-logo.png" buttonText="More Detail">
 	<div
-		class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
+		class="px-4 py-8 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-0"
 	>
 		<div class="grid gap-5 row-gap-8 grid-cols-1">
 			<div class="flex flex-col justify-center">
@@ -144,4 +146,5 @@
 			</div>
 		</div>
 	</div>
+	</AccroProduct>
 </section>

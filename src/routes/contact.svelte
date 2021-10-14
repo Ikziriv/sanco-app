@@ -9,7 +9,7 @@
 </script>
 
 <svelte:head>
-	<title>IOT Sanco Indonesia | Contact</title>
+	<title>IOT Solution Indonesia | Contact</title>
 </svelte:head>
 
 <section class="body-font">
