@@ -78,17 +78,28 @@
 				</div>
 			</div>
 			<div>
-				<img
-					class="object-cover object-right w-full h-56 rounded shadow-lg sm:h-96"
-					src="https://cdn.hms-networks.com/images/default-source/top-banners---1920-500---all-brands/ewon-slides/edited_machine-builder_1920x500px_v1_lighter.jpg?sfvrsn=711401d7_1"
-					alt=""
-				/>
+				<a
+					href="https://www.youtube.com/watch?v=x-9XGdtim8M&list=PLUd4TYrVUUR4TgDAW5GmTymmru894R9X_"
+					target="_blank"
+				>
+					<img
+						class="object-contain object-center w-full h-auto rounded shadow-lg"
+						src="/img/thumb-youtube.jpg"
+						alt=""
+					/>
+				</a>
 			</div>
 		</div>
 	</div>
 </section>
 
 <section class="w-full h-auto items-center bg-gray-100 bg-opacity-50">
+	<div class="flex flex-col justify-center py-4">
+		<div class="text-center font-semibold tracking-wide">INDUSTRIES</div>
+		<div class="text-sm text-center text-gray-800">
+			<p>Talk to us to find the right solution for your IOT industry's requirements</p>
+		</div>
+	</div>
 	<div class="px-4 py-16 mt-0 mx-auto max-w-5xl">
 		<div class="grid grid-cols-2 mt-0 gap-4 text-center lg:grid-cols-6">
 			<div class="flex items-center justify-center">

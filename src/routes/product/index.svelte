@@ -94,7 +94,7 @@
 	>
 		<div class="grid gap-5 row-gap-8 grid-cols-1">
 			<div class="flex flex-col justify-center">
-				<div class="grid gap-5 row-gap-8 grid-cols-2">
+				<div class="grid gap-5 row-gap-8 grid-cols-1">
 					<div
 						class="bg-white border-l-4 shadow-sm border-amber-500 hover:border-amber-700 hover:shadow-lg"
 					>
