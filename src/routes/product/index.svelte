@@ -89,16 +89,16 @@
 	</div>
 </section>
 
-<section class="body-font py-4">
+<section class="body-font px-8 py-4">
 	<AccroProduct imgsrc="/img/hms-logo.png" buttonText="More Detail">
 	<div
 		class="px-4 py-8 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-0"
 	>
 		<div class="grid gap-5 row-gap-8 grid-cols-1">
 			<div class="flex flex-col justify-center">
-				<div class="grid gap-5 row-gap-8 grid-cols-1">
+				<div class="grid gap-5 row-gap-8 grid-cols-2">
 					<div
-						class="bg-white border-l-4 shadow-sm border-amber-500 hover:border-amber-700 hover:shadow-lg"
+						class="bg-white shadow-sm hover:border-amber-700 hover:shadow-lg"
 					>
 						<div class="h-full p-5 border border-l-0 rounded-r">
 							<h6 class="mb-2 font-bold leading-5">Cosy</h6>
@@ -109,7 +109,7 @@
 						</div>
 					</div>
 					<div
-						class="bg-white border-l-4 shadow-sm border-amber-500 hover:border-amber-700 hover:shadow-lg"
+						class="bg-white shadow-sm hover:border-amber-700 hover:shadow-lg"
 					>
 						<div class="h-full p-5 border border-l-0 rounded-r">
 							<h6 class="mb-2 font-bold leading-5">Flexy</h6>
@@ -120,7 +120,7 @@
 						</div>
 					</div>
 					<div
-						class="bg-white border-l-4 shadow-sm border-amber-500 hover:border-amber-700 hover:shadow-lg"
+						class="bg-white shadow-sm hover:border-amber-700 hover:shadow-lg"
 					>
 						<div class="h-full p-5 border border-l-0 rounded-r">
 							<h6 class="mb-2 font-bold leading-5">Talk2M</h6>
@@ -132,7 +132,7 @@
 						</div>
 					</div>
 					<div
-						class="bg-white border-l-4 shadow-sm border-amber-500 hover:border-amber-700 hover:shadow-lg"
+						class="bg-white shadow-sm hover:border-amber-700 hover:shadow-lg"
 					>
 						<div class="h-full p-5 border border-l-0 rounded-r">
 							<h6 class="mb-2 font-bold leading-5">Netbiter – Argos</h6>

@@ -7,7 +7,7 @@
 				href="/"
 				class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900"
 			>
-				<img src="/img/hms-logo.png" class="w-64text-white p-2 rounded-full" alt="" />
+				<img src="/img/sanco-logo.png" class="w-48 text-white p-2 rounded-full" alt="" />
 			</a>
 		</div>
 		<div class="flex-grow flex flex-wrap md:pl-48 -mb-10 md:mt-0 mt-10 md:text-left text-center">
