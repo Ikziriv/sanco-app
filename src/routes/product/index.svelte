@@ -91,60 +91,132 @@
 
 <section class="body-font px-8 py-4">
 	<AccroProduct imgsrc="/img/hms-logo.png" buttonText="More Detail">
-	<div
-		class="px-4 py-8 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-0"
-	>
-		<div class="grid gap-5 row-gap-8 grid-cols-1">
-			<div class="flex flex-col justify-center">
-				<div class="grid gap-5 row-gap-8 grid-cols-2">
-					<div
-						class="bg-white shadow-sm hover:border-amber-700 hover:shadow-lg"
-					>
-						<div class="h-full p-5 border border-l-0 rounded-r">
-							<h6 class="mb-2 font-bold leading-5">Cosy</h6>
-							<p class="text-sm text-gray-900">
-								Cosy+ for secure industrial remote access, Successful connectivity for all your
-								machines with Cosy+ The new generation of remote access gateway.
-							</p>
+		<div
+			class="px-4 py-8 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-0"
+		>
+			<div class="container w-full h-auto">
+				<div class="flex flex-col justify-center h-full">
+					<div class="grid gap-2 md:gap-5 row-gap-8 grid-cols-2">
+						<div class="bg-white shadow-sm hover:border-amber-700 hover:shadow-lg">
+							<div class="grid grid-cols-3 h-full p-5 border rounded-r">
+								<div class="col-span-3 md:col-span-1 border">
+									<div class="flex justify-center p-2">
+										<img alt="" src="/img/hms/thumb-1.jpg" class="w-32" />
+									</div>
+								</div>
+								<div class="col-span-3 md:col-span-2 py-6 px-6">
+									<h6 class="mb-2 font-bold leading-5">EWON COSY+</h6>
+									<p class="text-sm text-gray-900">
+										The New Generation of Industrial Remote Access. Cosy+ combines the most advanced
+										security technologies in its hardware devices, with those in the leading cloud
+										connectivity platform, Talk2M.
+									</p>
+								</div>
+							</div>
 						</div>
-					</div>
-					<div
-						class="bg-white shadow-sm hover:border-amber-700 hover:shadow-lg"
-					>
-						<div class="h-full p-5 border border-l-0 rounded-r">
-							<h6 class="mb-2 font-bold leading-5">Flexy</h6>
-							<p class="text-sm text-gray-900">
-								Ewon Flexy - give life to all your IIoT projects!, unlock the data of your machines
-								to enable remote monitoring, predictive maintenance and other value-added services.
-							</p>
+						<div class="bg-white shadow-sm hover:border-amber-700 hover:shadow-lg">
+							<div class="grid grid-cols-3 h-full p-5 border rounded-r">
+								<div class="col-span-3 md:col-span-1 border">
+									<div class="flex justify-center p-2">
+										<img alt="" src="/img/hms/thumb-2.jpg" class="w-32" />
+									</div>
+								</div>
+								<div class="col-span-3 md:col-span-2 py-6 px-6">
+									<h6 class="mb-2 font-bold leading-5">EWON FLEXY 205</h6>
+									<p class="text-sm text-gray-900">
+										IIoT Gateway and Remote Access Router The Ewon Flexy 205 is an advanced internet
+										data gateway that allows Machine Builders to monitor and collect vital KPIs for
+										analysis and predictive maintenance.
+									</p>
+								</div>
+							</div>
 						</div>
-					</div>
-					<div
-						class="bg-white shadow-sm hover:border-amber-700 hover:shadow-lg"
-					>
-						<div class="h-full p-5 border border-l-0 rounded-r">
-							<h6 class="mb-2 font-bold leading-5">Talk2M</h6>
-							<p class="text-sm text-gray-900">
-								Secure Machine Connectivity, Wherever you Want, Discover Talk2M, a scalable,
-								reliable, and fully redundant Industrial Cloud. With servers spread around the
-								globe, it enables our customers to access their assets wherever they are.
-							</p>
+						<div class="bg-white shadow-sm hover:border-amber-700 hover:shadow-lg">
+							<div class="grid grid-cols-3 h-full p-5 border rounded-r">
+								<div class="col-span-3 md:col-span-1 border">
+									<div class="flex justify-center p-2">
+										<img alt="" src="/img/hms/thumb-3.jpg" class="w-32" />
+									</div>
+								</div>
+								<div class="col-span-3 md:col-span-2 py-6 px-6">
+									<h6 class="mb-2 font-bold leading-5">EWON NETBITER</h6>
+									<p class="text-sm text-gray-900">
+										Optimize the operational efficiency of your assets With Ewon Netbiter connected
+										to the cloud solution Argos, remote installations can be monitored and
+										controlled online. Track performance and get alarms.
+									</p>
+								</div>
+							</div>
 						</div>
-					</div>
-					<div
-						class="bg-white shadow-sm hover:border-amber-700 hover:shadow-lg"
-					>
-						<div class="h-full p-5 border border-l-0 rounded-r">
-							<h6 class="mb-2 font-bold leading-5">Netbiter – Argos</h6>
-							<p class="text-sm text-gray-900">
-								Manage power generators online!, netbiter enables you to remotely monitor and
-								control power generators. Get full insight from anywhere!
-							</p>
+						<div class="bg-white shadow-sm hover:border-amber-700 hover:shadow-lg">
+							<div class="grid grid-cols-3 h-full p-5 border rounded-r">
+								<div class="col-span-3 md:col-span-1 border">
+									<div class="flex justify-center p-2">
+										<img alt="" src="/img/hms/thumb-4.jpg" class="w-32" />
+									</div>
+								</div>
+								<div class="col-span-3 md:col-span-2 py-6 px-6">
+									<h6 class="mb-2 font-bold leading-5">ANYBUS COMMUNICATOR</h6>
+									<p class="text-sm text-gray-900">
+										Anybus Communicator you can connect your non-networked device to any major
+										fieldbus or industrial Ethernet network. The Communicator performs an
+										intelligent conversion between the RS-232/422/485 protocol.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="bg-white shadow-sm hover:border-amber-700 hover:shadow-lg">
+							<div class="grid grid-cols-3 h-full p-5 border rounded-r">
+								<div class="col-span-3 md:col-span-1 border">
+									<div class="flex justify-center p-2">
+										<img alt="" src="/img/hms/thumb-5.jpg" class="w-32" />
+									</div>
+								</div>
+								<div class="col-span-3 md:col-span-2 py-6 px-6">
+									<h6 class="mb-2 font-bold leading-5">ANYBUS X GATEWAY</h6>
+									<p class="text-sm text-gray-900">
+										The robust Anybus X-gateways allow system integrators to easily transfer I/O
+										data between devices on two different PLC systems and networks, enabling a
+										consistent information flow throughout the entire plant.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="bg-white shadow-sm hover:border-amber-700 hover:shadow-lg">
+							<div class="grid grid-cols-3 h-full p-5 border rounded-r">
+								<div class="col-span-3 md:col-span-1 border">
+									<div class="flex justify-center p-2">
+										<img alt="" src="/img/hms/thumb-6.jpg" class="w-32" />
+									</div>
+								</div>
+								<div class="col-span-3 md:col-span-2 py-6 px-6">
+									<h6 class="mb-2 font-bold leading-5">ANYBUS BOLT</h6>
+									<p class="text-sm text-gray-900">
+										Anybus Wireless Bolt enables you to connect industrial machinery to a wireless
+										network. It is mounted on a cabinet or a machine to enable wireless access.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="bg-white shadow-sm hover:border-amber-700 hover:shadow-lg">
+							<div class="grid grid-cols-3 h-full p-5 border rounded-r">
+								<div class="col-span-3 md:col-span-1 border">
+									<div class="flex justify-center p-2">
+										<img alt="" src="/img/hms/thumb-7.jpg" class="w-32" />
+									</div>
+								</div>
+								<div class="col-span-3 md:col-span-2 py-6 px-6">
+									<h6 class="mb-2 font-bold leading-5">ANYBUS BRIDGE</h6>
+									<p class="text-sm text-gray-900">
+										The 1080 Quantum and 1080 Sprint both communicate via TCP/IP. They are connected
+										to the Anybus Wireless Bridge via an Ethernet cable with an M12 connector.
+									</p>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
 	</AccroProduct>
 </section>

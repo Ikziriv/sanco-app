@@ -1,3 +1,7 @@
+<script>
+	// @ts-nocheck
+</script>
+
 <div class="text-gray-600 body-font border-t border-gray-50 bg-gray-50">
 	<div
 		class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col"

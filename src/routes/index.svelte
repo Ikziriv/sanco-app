@@ -1,4 +1,5 @@
 <script>
+	import SvelteSeo from 'svelte-seo';
 	import { _ } from '$lib/scripts/i18n';
 	import Jumbotron from '../components/frontend/Jumbotron.svelte';
 	// import { supabase } from '$lib/supabase';
@@ -29,6 +30,24 @@
 
 <svelte:head>
 	<title>IOT Solution Indonesia | Home</title>
+
+	<SvelteSeo
+		openGraph={{
+			title: 'IOT Solution Indonesia',
+			description:
+				'We are committed to serve you and your business with the highest standards of quality. We offer you a partnership with built on trust, know-how, quality, service and safety through communication and information',
+			url: 'https://www.sanco.com/',
+			type: 'website',
+			images: [
+				{
+					url: '/img/sanco-logo.png',
+					width: 850,
+					height: 650,
+					alt: 'Sanco IOT Indonesia'
+				}
+			]
+		}}
+	/>
 </svelte:head>
 
 <section class="body-font">

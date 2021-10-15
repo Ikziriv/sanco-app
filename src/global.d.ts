@@ -3,6 +3,11 @@
 /// <reference types="vite/client" />
 
 declare module 'svelte-swipe';
+declare module 'svelte-pdf';
+
+declare module '@tailwindcss/typography';
+declare module '@tailwindcss/forms';
+declare module '@tailwindcss/line-clamp';
 //#region Ensure image file endings have a type for TypeScript
 /**
  * These declarations tell TypeScript that we allow import of images, e.g.

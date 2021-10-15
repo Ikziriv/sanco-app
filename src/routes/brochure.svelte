@@ -1,13 +1,11 @@
 <script>
 	// import supabase from '$lib/supabase';
+	import WebViewer from '../components/frontend/pdftron/WebViewer.svelte';
 
-	import { onMount } from 'svelte';
-	let PdfViewer;
-
-	onMount(async () => {
-		const module = await import('svelte-pdf');
-		PdfViewer = module.default;
-	});
+	const ready = (/** @type {{ detail: { instance: any; }; }} */ r) => {
+		const instance = r.detail.instance;
+		instance.loadDocument('/file/SANCO-HMS-COMBINE.pdf');
+	};
 </script>
 
 <svelte:head>
@@ -76,5 +74,5 @@
 </section>
 
 <section>
-	<svelte:component this={PdfViewer} url="/file/SANCO-HMS-COMBINE.pdf" />
+	<WebViewer on:ready={ready} />
 </section>
