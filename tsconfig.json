@@ -1,4 +1,5 @@
 {
+	"extends": "@tsconfig/svelte/tsconfig.json",
 	"compilerOptions": {
 		"moduleResolution": "node",
 		"module": "es2020",
@@ -14,6 +15,8 @@
 		"importsNotUsedAsValues": "error",
 		"isolatedModules": true,
 		"resolveJsonModule": true,
+		"experimentalDecorators": true,
+		"emitDecoratorMetadata": true,
 		/**
 			To have warnings/errors of the Svelte compiler at the correct position,
 			enable source maps by default.
@@ -25,6 +28,13 @@
 		"baseUrl": ".",
 		"allowJs": true,
 		"checkJs": true,
+		"types": [
+			"node",
+			"yargs",
+			"cookie",
+			"node-fetch",
+			"nprogress"
+		],
 		"paths": {
 			"$lib": [
 				"src/lib"
@@ -48,8 +58,24 @@
 	},
 	"include": [
 		"src/**/*.d.ts",
+		"src/*.d.ts",
+		"src/*.d.ts",
 		"src/**/*.js",
 		"src/**/*.ts",
-		"src/**/*.svelte"
+		"src/**/**/**/*.ts",
+		"src/**/*.svelte",
+		"src/lib/scripts/*.js",
+		"tools/*.ts",
+		"tools/*.js"
+	],
+	"exclude": [
+		"node_modules/*",
+		"dist/*",
+		".svelte/*",
+		".svelte-kit/*",
+		"build/*",
+		"coverage/*",
+		".vercel_build_output/*",
+		"functions/*"
 	]
 }

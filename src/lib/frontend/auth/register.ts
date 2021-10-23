@@ -1,8 +1,8 @@
-import supabase from '$lib/supabasepabase'
+import { supabase } from '$lib/supabase'
 
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-export async function post(request) {
+export async function post(request: any) {
     let email = request.body.get('email')
     let password = request.body.get('password')
 
@@ -10,6 +10,7 @@ export async function post(request) {
 
     if (error) {
         return {
+            // @ts-ignore
             status: error.status,
             body: error.message
         }

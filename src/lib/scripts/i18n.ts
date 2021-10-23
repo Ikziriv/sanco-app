@@ -13,14 +13,14 @@ import {
 import { locales, fallbackLocale } from "./l10n";
 
 const MESSAGE_FILE_URL_TEMPLATE = "../../../static/lang/{locale}.json";
-let _activeLocale;
+let _activeLocale: string | number;
 const isDownloading = writable(false);
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 async function setupI18n(options = {}) {
     try {
         const locale_ = supported(
-            options.withLocale ||
+            // options.withLocale ||
             language(getLocaleFromNavigator()),
         );
 
@@ -66,7 +66,7 @@ const dir = derived(locale, ($locale) =>
 /**
  * @param {RequestInfo} url
  */
-async function loadJson(url) {
+async function loadJson(url: RequestInfo) {
     const response = await fetch(url);
     return await response.json();
 }
@@ -74,21 +74,21 @@ async function loadJson(url) {
 /**
  * @param {string | number} locale
  */
-function hasLoadedLocale(locale) {
+function hasLoadedLocale(locale: string | number) {
     return get(dictionary)[locale];
 }
 
 /**
  * @param {string} locale
  */
-function language(locale) {
+function language(locale: string) {
     return locale;
 }
 
 /**
  * @param {string} locale
  */
-function supported(locale) {
+function supported(locale: string) {
     if (Object.keys(locales).includes(locale)) {
         return locale;
     } else {

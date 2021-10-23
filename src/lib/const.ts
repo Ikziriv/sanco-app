@@ -1,3 +1,7 @@
+// Asset Apps
+export const page_size = 10;
+export const placeholder = 'https://static.productionready.io/images/smiley-cyrus.jpg';
+
 // Page Routes
 export const ROUTE_HOME = '/'
 export const ROUTE_AUTH = '/auth'

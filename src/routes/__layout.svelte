@@ -1,33 +1,81 @@
 <script context="module">
-	export async function load({ session }) {
-		const localTheme = session.theme;
-		return { props: { localTheme } };
+	/**
+	 * @type {import('@sveltejs/kit').Load}
+	 */
+	export async function load({ page }) {
+		return {
+			props: {
+				path: page.path
+			}
+		};
 	}
 </script>
 
-<script>
-	import { setupI18n, isLocaleLoaded, locale, dir, _ } from '../lib/scripts/i18n';
+<script lang="ts">
+	import { onMount } from 'svelte';
 	// import supabase from '$lib/supabase';
-	import '$lib/main.css';
-	import { jwt, theme } from '$lib/stores';
+	import { appSettings } from '../lib/appSettings';
+	import { dir, isLocaleLoaded, setupI18n, _ } from '$lib/i18n';
+	import { faMoon, faSun, faBars } from '@fortawesome/free-solid-svg-icons';
+	import ClickOutside from 'svelte-click-outside';
+	import Icon from 'svelte-awesome';
+	import Fa from 'svelte-fa/src/fa.svelte';
+	import { jwt, theme, data, dark } from '$lib/stores';
 
 	import Navbar from '../components/frontend/Navbar.svelte';
+	import CookieNotice from '../components/global/CookieNotice.svelte';
 	import Footer from '../components/frontend/Footer.svelte';
 	// import LoadingScreen from '../components/frontend/LoadingScreen.svelte';
 	import LocaleSelector from '../components/global/LocaleSelector.svelte';
+
+	import Toggle from '../components/frontend/inputs/Toggle.svelte';
 	import { toggleTheme } from '$lib/stores/theme';
 	import { IcoMoon, IcoSun } from '../components/global/icons';
 	import Whatsapp from '../components/frontend/modal/Whatsapp.svelte';
 
 	import NProgress from '../components/global/NProgress.svelte';
 
-	import '../app.postcss';
+	import '../styles/tailwind.postcss';
+	import '../styles/main.css';
 
+	let open = false;
+	let scrollY: number;
 	let isModalOpen = true;
-	let scrollY;
+	let showScrollBar = false;
+	let mouseX = 0;
+	let scrolling = false;
+	let msSinceLastScroll = 0;
 
-	$: if (!$isLocaleLoaded) {
-		setupI18n({ withLocale: 'en' });
+	// $: if (document.dir !== $dir) {
+	// 	document.dir = $dir;
+	// }
+
+	function toggleDarkMode() {
+		dark.set(!$dark);
+	}
+
+	const toggleHamburgerMenu = () => {
+		open = !open;
+	};
+
+	void setupI18n();
+	onMount(async () => {
+		$appSettings.darkMode
+			? document.body.classList.add('scheme-dark')
+			: document.body.classList.remove('scheme-dark');
+		dark.set(localStorage.getItem('darkMode') === 'true');
+		dark.subscribe((value) => localStorage.setItem('darkMode', value ? 'true' : 'false'));
+		setInterval(() => {
+			if (scrolling) msSinceLastScroll++;
+			showScrollBar = (scrolling && msSinceLastScroll < 300) || mouseX > window.innerWidth - 15;
+		}, 1);
+	});
+	function onScroll() {
+		scrolling = true;
+		msSinceLastScroll = 0;
+	}
+	function onMouse(event: MouseEvent) {
+		mouseX = event.clientX;
 	}
 </script>
 
@@ -43,20 +91,23 @@
 		<div class="w-full text-white bg-sky-900">
 			<div class="container flex items-center justify-between px-4 py-4 mx-auto">
 				<div class="flex">
+					<!-- <div class="rounded-full py-0 px-0 mr-2" onClick={toggleDarkMode}>
+						<Fa icon={$dark ? faMoon : faSun} scale={1.1} />
+					</div> -->
+					<!-- <Toggle on={$appSettings.darkMode} /> -->
 					<a
 						href="/theme"
-						class="block ml-1 mr-5"
+						class="block py-0.5 ml-1 mr-5"
 						aria-label="Toggle Light and Dark mode"
-						on:click|preventDefault={() => {
-							toggleTheme(theme, $theme);
-						}}
+						onClick={toggleDarkMode}
 					>
-						<div class="hidden dark:block">
+						<Fa icon={$dark ? faMoon : faSun} scale={1.2} />
+						<!-- <div class="hidden dark:block">
 							<IcoSun />
 						</div>
 						<div class="dark:hidden">
 							<IcoMoon />
-						</div>
+						</div> -->
 					</a>
 					<div class="flex">
 						<span class="mr-2">
@@ -74,10 +125,11 @@
 								/></svg
 							>
 						</span>
-						<LocaleSelector
-							value={$locale}
-							on:locale-changed={(e) => setupI18n({ withLocale: e.detail })}
-						/>
+						<!-- <LocaleSelector
+							value={locales[$appSettings.language]}
+							on:locale-changed={(e) =>
+								setupI18n({ fallbackLocale: 'en', initialLocale: $appSettings.language })}
+						/> -->
 					</div>
 				</div>
 
@@ -86,41 +138,54 @@
 						<p class="mx-3 text-sm font-bold">
 							<span class="font-thin">+62-21-58905070</span>
 
-							<span class="font-thin">info@sanco.co.id</span>
+							<!-- <span class="font-thin">info@sanco.co.id</span> -->
 						</p>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<div class="container mx-auto flex p-5 flex-col md:flex-row md:items-center">
+		<div class="container mx-auto flex p-5 flex-wrap justify-between items-center">
 			<a href="/" class="flex title-font font-medium md:items-center text-gray-900 mb-4 md:mb-0">
 				<img src="/img/sanco-logo.png" class="w-40" alt="" />
 			</a>
-			<Navbar />
-			<a
-				href="/auth"
-				class="inline-flex uppercase rounded-lg items-center tracking-wide bg-white border border-sky-900 py-2 px-4 focus:outline-none hover:border-amber-500 text-sky-900 text-sm font-semibold mt-4 md:mt-0"
-				>Login
-				<svg
-					class="w-4 h-4 ml-1"
-					fill="none"
-					stroke="currentColor"
-					viewBox="0 0 24 24"
-					xmlns="http://www.w3.org/2000/svg"
-					><path
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						stroke-width="2"
-						d="M9 5l7 7-7 7"
-					/></svg
-				>
-			</a>
+			<div class="ml-auto md:hidden mb-4">
+				<ClickOutside on:clickoutside={() => (open = false)}>
+					<button
+						class="flex items-center px-3 py-2 text-sky-900 border border-amber-500 hover:text-sky-800 hover:border-amber-600"
+						aria-label="Hamburger menu"
+						on:click={toggleHamburgerMenu}
+					>
+						<Icon data={faBars} />
+					</button>
+				</ClickOutside>
+			</div>
+			<div class:hidden={!open} class="w-full ml-auto md:flex md:w-auto">
+				<Navbar />
+				<a
+					href="/auth"
+					class="inline-flex uppercase rounded-lg items-center tracking-wide bg-white border border-sky-900 py-2 px-4 focus:outline-none hover:border-amber-500 text-sky-900 text-sm font-semibold mt-4 md:mt-0"
+					>Login
+					<svg
+						class="w-4 h-4 ml-1"
+						fill="none"
+						stroke="currentColor"
+						viewBox="0 0 24 24"
+						xmlns="http://www.w3.org/2000/svg"
+						><path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M9 5l7 7-7 7"
+						/></svg
+					>
+				</a>
+			</div>
 		</div>
 	</header>
-	<main class="relative">
+	<main class="relative" on:scroll={onScroll} on:mousemove={onMouse}>
 		<slot />
-		<div class="fixed top-0 right-0 z-40 mt-40 mr-2">
+		<div class="fixed top-0 right-0 z-40 mt-40 mr-4">
 			<div class="w-full h-auto bg-green-500 hover:bg-green-600 rounded-full px-1 py-1 shadow-lg">
 				<button on:click={() => (isModalOpen = true)} class="inline-block py-2 px-2">
 					<svg
@@ -168,6 +233,8 @@
 		</span>
 	</div>
 {/if}
+
+<CookieNotice />
 
 <style lang="postcss">
 	header {

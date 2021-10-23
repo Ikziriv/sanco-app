@@ -32,7 +32,7 @@
 						<div class="flex justify-start">
 							<div class="mr-3">
 								<div class="p-2 bg-gray-50 rounded-full">
-									<img class="rounded-full w-10 p-1" src="/img/sanco-logo.svg" />
+									<img class="rounded-full w-10 p-1" src="/img/sanco-logo.svg" alt="Sanco Logo" />
 								</div>
 							</div>
 							<div class="flex flex-col py-2 px-4">

@@ -8,9 +8,9 @@
 		<div class="container flex items-center justify-between px-4 py-4 mx-auto">
 			<div class="flex">
 				<p class="mx-3 text-sm font-bold">
-					<span class="font-thin">+62-21-58905070</span> /
+					<span class="font-thin">+62-21-58905070</span>
 
-					<span class="font-thin">info@sanco.co.id</span>
+					<!-- <span class="font-thin">info@sanco.co.id</span> -->
 				</p>
 			</div>
 
@@ -48,6 +48,7 @@
 	<div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
 		<nav class="flex w-1/2 flex-wrap items-center text-base md:ml-auto">
 			<a
+				sveltekit:prefetch
 				href="/"
 				class="flex order-first lg:order-none title-font font-medium items-start text-gray-900 lg:items-start lg:justify-start mb-4 md:mb-0"
 			>

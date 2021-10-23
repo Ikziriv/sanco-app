@@ -97,7 +97,11 @@
 			<div class="container w-full h-auto">
 				<div class="flex flex-col justify-center h-full">
 					<div class="grid gap-2 md:gap-5 row-gap-8 grid-cols-2">
-						<div class="bg-white shadow-sm hover:border-amber-700 hover:shadow-lg">
+						<a
+							sveltekit:prefetch
+							href="/product/cosy"
+							class="bg-white shadow-sm hover:border-amber-700 hover:shadow-lg"
+						>
 							<div class="grid grid-cols-3 h-full p-5 border rounded-r">
 								<div class="col-span-3 md:col-span-1 border">
 									<div class="flex justify-center p-2">
@@ -113,8 +117,12 @@
 									</p>
 								</div>
 							</div>
-						</div>
-						<div class="bg-white shadow-sm hover:border-amber-700 hover:shadow-lg">
+						</a>
+						<a
+							sveltekit:prefetch
+							href="/product/flexy"
+							class="bg-white shadow-sm hover:border-amber-700 hover:shadow-lg"
+						>
 							<div class="grid grid-cols-3 h-full p-5 border rounded-r">
 								<div class="col-span-3 md:col-span-1 border">
 									<div class="flex justify-center p-2">
@@ -130,8 +138,12 @@
 									</p>
 								</div>
 							</div>
-						</div>
-						<div class="bg-white shadow-sm hover:border-amber-700 hover:shadow-lg">
+						</a>
+						<a
+							sveltekit:prefetch
+							href="/product/netbiter"
+							class="bg-white shadow-sm hover:border-amber-700 hover:shadow-lg"
+						>
 							<div class="grid grid-cols-3 h-full p-5 border rounded-r">
 								<div class="col-span-3 md:col-span-1 border">
 									<div class="flex justify-center p-2">
@@ -147,7 +159,7 @@
 									</p>
 								</div>
 							</div>
-						</div>
+						</a>
 						<div class="bg-white shadow-sm hover:border-amber-700 hover:shadow-lg">
 							<div class="grid grid-cols-3 h-full p-5 border rounded-r">
 								<div class="col-span-3 md:col-span-1 border">
