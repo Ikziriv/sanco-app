@@ -26,8 +26,7 @@
     "build:vercel:verbose:amp": "cross-env ADAPTER=vercel OPTIONS='{}' AMP=true npm run build:verbose",
     "build:vercel:ssr:amp": "cross-env ADAPTER=vercel OPTIONS='{}' SSR=true AMP=true npm run build",
     "build:vercel:verbose:ssr:amp": "cross-env ADAPTER=vercel OPTIONS='{}' SSR=true AMP=true npm run build:verbose",
-    "svelte-check": "svelte-check",
-    "postinstall": "node tools/webviewer.js"
+    "svelte-check": "svelte-check"
   },
   "devDependencies": {
     "@carbon/charts-svelte": "^0.49.6",
