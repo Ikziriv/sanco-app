@@ -3,7 +3,7 @@ const colors = require('tailwindcss/colors')
 
 const config = {
 	purge: {
-		mode: 'jit',
+		// mode: 'jit',
 		content: ['./src/**/*.{html,js,svelte,ts}'],
 		options: {
 			defaultExtractor: (content) => [
