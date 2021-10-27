@@ -44,7 +44,7 @@
 
 			<div class="text-center mr-3 py-2">
 				<button class="mr-2 cookie-notice-btn" on:click={onConfirm}>Accept</button>
-				<button class="cookie-notice-btn" on:click={onDecline}>Decline</button>
+				<button class="cookie-notice-btn mt-2 md:mt-0" on:click={onDecline}>Decline</button>
 			</div>
 		</div>
 	</div>
