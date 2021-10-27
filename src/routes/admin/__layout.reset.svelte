@@ -11,14 +11,14 @@
 
 	export let segment;
 
-	// if (browser) {
-	// 	$session = supabase.auth.session();
-	// 	setTimeout(() => ($session ? goto('/admin') : goto('auth/register')));
-	// 	supabase.auth.onAuthStateChange((event, ssn) => {
-	// 		$session = ssn;
-	// 		setTimeout(() => ($session ? goto('/admin') : goto('auth/register')));
-	// 	});
-	// }
+	if (browser) {
+		$session = supabase.auth.session();
+		setTimeout(() => ($session ? goto('/admin') : goto('auth/register')));
+		supabase.auth.onAuthStateChange((event, ssn) => {
+			$session = ssn;
+			setTimeout(() => ($session ? goto('/admin') : goto('auth/register')));
+		});
+	}
 </script>
 
 <div class="flex flex-row">

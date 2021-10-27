@@ -94,7 +94,7 @@
     "rehype": "^12.0.0",
     "rss": "^1.2.2",
     "sass": "^1.43.2",
-    "svelte": "^3.42.6",
+    "svelte": "^3.44.0",
     "svelte-awesome": "^2.3.2",
     "svelte-check": "^2.2.6",
     "svelte-click-outside": "^1.0.0",

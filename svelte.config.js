@@ -6,7 +6,7 @@ const hasAdapter = process.env.ADAPTER;
 const adapt = hasAdapter ? hasAdapter : 'vercel';
 const isAMP = process.env.AMP ? true : false;
 
-// import { imagetools } from 'vite-imagetools';
+import { imagetools } from 'vite-imagetools';
 import { mdsvex } from 'mdsvex';
 
 import preprocess from 'svelte-preprocess';
@@ -74,7 +74,7 @@ const config = {
 					$stores: resolve(__dirname, './src/lib/stores'),
 				}
 			},
-			plugins: [],
+			plugins: [imagetools({ force: true })],
 		})
 	}
 };
