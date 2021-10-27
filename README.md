@@ -1,7 +1,7 @@
 # Sanco Apps- Build Using Svelte + Supabase ( Development Only )
 > Note: this application under development, i will share this source code for studies together ( Not Recomended for Production )
 
-This sanco application for IoT, i build it for dashboard on IoT solution in sanco indonesia
+This dashboard sanco application for iot, all build style using tailwindcss, maybe it can be reference or study for your iot solution?
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte);
 
 <br> 
