@@ -94,14 +94,14 @@
 				Follow Us
 			</button>
 			<div class="flex pl-0 justify-center">
-				<a class="flex items-center text-gray-900 hover:text-black mr-6 no-underline" href="#"
-					><i class="fab fa-github-alt" /></a
+				<span class="flex items-center text-gray-900 hover:text-black mr-6 no-underline"
+					><i class="fab fa-github-alt" /></span
 				>
-				<a class="flex items-center text-gray-900 hover:text-black mr-6 no-underline" href="#"
-					><i class="fab fa-slack" /></a
+				<span class="flex items-center text-gray-900 hover:text-black mr-6 no-underline"
+					><i class="fab fa-slack" /></span
 				>
-				<a class="flex items-center text-gray-900 hover:text-black no-underline" href="#"
-					><i class="fab fa-twitter" /></a
+				<span class="flex items-center text-gray-900 hover:text-black no-underline"
+					><i class="fab fa-twitter" /></span
 				>
 			</div>
 		</div>

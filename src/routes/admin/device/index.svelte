@@ -67,9 +67,9 @@
 							<div
 								class="absolute right-0 flex-col items-start hidden w-40 mt-1 pb-1 bg-gray-800 border border-gray-800 shadow-lg group-focus:flex"
 							>
-								<a class="w-full px-4 py-2 text-left hover:bg-gray-900" href="#">Menu Item 1</a>
-								<a class="w-full px-4 py-2 text-left hover:bg-gray-900" href="#">Menu Item 2</a>
-								<a class="w-full px-4 py-2 text-left hover:bg-gray-900" href="#">Menu Item 3</a>
+								<span class="w-full px-4 py-2 text-left hover:bg-gray-900">Menu Item 1</span>
+								<span class="w-full px-4 py-2 text-left hover:bg-gray-900">Menu Item 2</span>
+								<span class="w-full px-4 py-2 text-left hover:bg-gray-900">Menu Item 3</span>
 							</div>
 						</button>
 					</div>
@@ -165,7 +165,7 @@
 									<div class="flex flex-col justify-end w-full overflow-y-auto ml-10">
 										<div class="mb-3 flex w-40">
 											<div
-												class="w-12 h-6 flex items-center bg-gray-300 rounded-full mx-1 px-1 bg-sky-700"
+												class="w-12 h-6 flex items-center bg-gray-300 rounded-full mx-1 px-1 "
 											>
 												<!-- Switch -->
 												<div
@@ -176,7 +176,7 @@
 										</div>
 										<div class="mb-3 flex w-40">
 											<div
-												class="w-12 h-6 flex items-center bg-gray-300 rounded-full mx-1 px-1 bg-sky-700"
+												class="w-12 h-6 flex items-center bg-gray-300 rounded-full mx-1 px-1 "
 											>
 												<!-- Switch -->
 												<div

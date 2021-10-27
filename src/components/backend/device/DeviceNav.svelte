@@ -34,9 +34,9 @@
 				<div
 					class="absolute z-10 flex-col items-start hidden w-full pb-1 bg-gray-800 shadow-lg group-focus:flex"
 				>
-					<a class="w-full px-4 py-2 text-left hover:bg-gray-900" href="#">Menu Item 1</a>
-					<a class="w-full px-4 py-2 text-left hover:bg-gray-900" href="#">Menu Item 1</a>
-					<a class="w-full px-4 py-2 text-left hover:bg-gray-900" href="#">Menu Item 1</a>
+					<span class="w-full px-4 py-2 text-left hover:bg-gray-900">Menu Item 1</span>
+					<span class="w-full px-4 py-2 text-left hover:bg-gray-900">Menu Item 1</span>
+					<span class="w-full px-4 py-2 text-left hover:bg-gray-900">Menu Item 1</span>
 				</div>
 			</button>
 
@@ -254,10 +254,7 @@
 
 			<div class="absolute bottom-0 inset-x-0">
 				<div class="flex justify-start items-start w-full bg-transparent hover:bg-gray-100">
-					<a
-						class="flex items-center flex-shrink-0 h-10 px-3 mt-auto text-sm font-medium "
-						href="#"
-					>
+					<span class="flex items-center flex-shrink-0 h-10 px-3 mt-auto text-sm font-medium ">
 						<svg
 							class="w-5 h-5"
 							xmlns="http://www.w3.org/2000/svg"
@@ -273,7 +270,7 @@
 							/>
 						</svg>
 						<span class="ml-2 leading-none">New Device</span>
-					</a>
+					</span>
 				</div>
 			</div>
 		</div>
