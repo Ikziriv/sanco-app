@@ -1,11 +1,11 @@
 <script>
 	// import supabase from '$lib/supabase';
-	import WebViewer from '../components/frontend/pdftron/WebViewer.svelte';
+	// import WebViewer from '../components/frontend/pdftron/WebViewer.svelte';
 
-	const ready = (/** @type {{ detail: { instance: any; }; }} */ r) => {
-		const instance = r.detail.instance;
-		instance.loadDocument('/file/SANCO-HMS-COMBINE.pdf');
-	};
+	// const ready = (/** @type {{ detail: { instance: any; }; }} */ r) => {
+	// 	const instance = r.detail.instance;
+	// 	instance.loadDocument('/file/SANCO-HMS-COMBINE.pdf');
+	// };
 </script>
 
 <svelte:head>
@@ -74,5 +74,5 @@
 </section>
 
 <section>
-	<WebViewer on:ready={ready} />
+	<!-- <WebViewer on:ready={ready} /> -->
 </section>

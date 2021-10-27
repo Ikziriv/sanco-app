@@ -23067,7 +23067,7 @@ function lowercase_keys(obj) {
   }
   return clone2;
 }
-function error$1(body) {
+function error$2(body) {
   return {
     status: 500,
     body,
@@ -23096,14 +23096,14 @@ async function render_endpoint(request, route, match) {
     return;
   }
   if (typeof response !== "object") {
-    return error$1(`${preface}: expected an object, got ${typeof response}`);
+    return error$2(`${preface}: expected an object, got ${typeof response}`);
   }
   let { status = 200, body, headers = {} } = response;
   headers = lowercase_keys(headers);
   const type = get_single_valued_header(headers, "content-type");
   const is_type_textual = is_content_type_textual(type);
   if (!is_type_textual && !(body instanceof Uint8Array || is_string(body))) {
-    return error$1(`${preface}: body must be an instance of string or Uint8Array if content-type is not a supported textual content-type`);
+    return error$2(`${preface}: body must be an instance of string or Uint8Array if content-type is not a supported textual content-type`);
   }
   let normalized_body;
   if ((typeof body === "object" || typeof body === "undefined") && !(body instanceof Uint8Array) && (!type || type.startsWith("application/json"))) {
@@ -24632,9 +24632,9 @@ function init2(settings = default_settings) {
     amp: false,
     dev: false,
     entry: {
-      file: assets + "/_app/start-7449b6a1.js",
+      file: assets + "/_app/start-60734c0a.js",
       css: [assets + "/_app/assets/start-464e9d0a.css", assets + "/_app/assets/vendor-025a9557.css"],
-      js: [assets + "/_app/start-7449b6a1.js", assets + "/_app/chunks/vendor-f4d47832.js", assets + "/_app/chunks/singletons-12a22614.js"]
+      js: [assets + "/_app/start-60734c0a.js", assets + "/_app/chunks/vendor-238e9390.js", assets + "/_app/chunks/singletons-12a22614.js"]
     },
     fetched: void 0,
     floc: false,
@@ -24665,112 +24665,112 @@ var empty = () => ({});
 var manifest = {
   assets: [{ "file": "favicon.png", "size": 1571, "type": "image/png" }, { "file": "file/case/casestudy-anybus-bolt .pdf", "size": 2593943, "type": "application/pdf" }, { "file": "file/case/casestudy-anybus-communicator.pdf", "size": 3927229, "type": "application/pdf" }, { "file": "file/case/casestudy-anybus-xgateway.pdf", "size": 5472279, "type": "application/pdf" }, { "file": "file/case/casestudy-ewon-flexy205.pdf", "size": 3000530, "type": "application/pdf" }, { "file": "file/case/casestudy-ewon-netbiter.pdf", "size": 6548705, "type": "application/pdf" }, { "file": "file/SANCO-HMS-COMBINE.pdf", "size": 3886850, "type": "application/pdf" }, { "file": "img/case/case1.png", "size": 249391, "type": "image/png" }, { "file": "img/case/case2.png", "size": 202958, "type": "image/png" }, { "file": "img/case/case3.png", "size": 151652, "type": "image/png" }, { "file": "img/case/case4.png", "size": 116816, "type": "image/png" }, { "file": "img/case/case5.png", "size": 95574, "type": "image/png" }, { "file": "img/exhibitions/thumb-rev-4.jpg", "size": 18063, "type": "image/jpeg" }, { "file": "img/exhibitions/thumb-rev-5.jpg", "size": 27161, "type": "image/jpeg" }, { "file": "img/exhibitions/thumb-rev-6.png", "size": 91703, "type": "image/png" }, { "file": "img/exhibitions/thumb-rev-7.jpg", "size": 46056, "type": "image/jpeg" }, { "file": "img/exhibitions/thumb-rev-8.jpg", "size": 106662, "type": "image/jpeg" }, { "file": "img/exhibitions/thumb-rev-9.jpg", "size": 89543, "type": "image/jpeg" }, { "file": "img/hero-img.jpg", "size": 918130, "type": "image/jpeg" }, { "file": "img/hms/thumb-1.jpg", "size": 54316, "type": "image/jpeg" }, { "file": "img/hms/thumb-2.jpg", "size": 21138, "type": "image/jpeg" }, { "file": "img/hms/thumb-3.jpg", "size": 15239, "type": "image/jpeg" }, { "file": "img/hms/thumb-4.jpg", "size": 14828, "type": "image/jpeg" }, { "file": "img/hms/thumb-5.jpg", "size": 21219, "type": "image/jpeg" }, { "file": "img/hms/thumb-6.jpg", "size": 14258, "type": "image/jpeg" }, { "file": "img/hms/thumb-7.jpg", "size": 13721, "type": "image/jpeg" }, { "file": "img/hms-logo.png", "size": 14039, "type": "image/png" }, { "file": "img/hmslogo.png", "size": 2065, "type": "image/png" }, { "file": "img/industries/img-1.png", "size": 1094, "type": "image/png" }, { "file": "img/industries/img-2.png", "size": 1285, "type": "image/png" }, { "file": "img/industries/img-3.png", "size": 1741, "type": "image/png" }, { "file": "img/industries/img-4.png", "size": 1706, "type": "image/png" }, { "file": "img/industries/img-5.png", "size": 1571, "type": "image/png" }, { "file": "img/industries/img-6.png", "size": 1010, "type": "image/png" }, { "file": "img/jumbotron/old/slide-1.jpg", "size": 166807, "type": "image/jpeg" }, { "file": "img/jumbotron/old/slide-2.jpg", "size": 68011, "type": "image/jpeg" }, { "file": "img/jumbotron/slide-1.png", "size": 1204336, "type": "image/png" }, { "file": "img/jumbotron/slide-2.png", "size": 253189, "type": "image/png" }, { "file": "img/sanco-footer.png", "size": 4482, "type": "image/png" }, { "file": "img/sanco-logo.png", "size": 6461, "type": "image/png" }, { "file": "img/sanco-logo.svg", "size": 1198, "type": "image/svg+xml" }, { "file": "img/thumb-youtube.jpg", "size": 350188, "type": "image/jpeg" }, { "file": "img/visitor-img.jpg", "size": 1526486, "type": "image/jpeg" }, { "file": "lang/en.json", "size": 3269, "type": "application/json" }, { "file": "lang/id.json", "size": 3313, "type": "application/json" }, { "file": "lib/core/21.chunk.js", "size": 3674, "type": "application/javascript" }, { "file": "lib/core/AndroidContentPartRetriever.chunk.js", "size": 933, "type": "application/javascript" }, { "file": "lib/core/ArrayBufferPdfPartRetriever.chunk.js", "size": 612, "type": "application/javascript" }, { "file": "lib/core/assets/1px.png", "size": 119, "type": "image/png" }, { "file": "lib/core/assets/dragginghand.cur", "size": 1470, "type": null }, { "file": "lib/core/assets/dragginghand.png", "size": 130, "type": "image/png" }, { "file": "lib/core/assets/hand.cur", "size": 1470, "type": null }, { "file": "lib/core/assets/hand.png", "size": 164, "type": "image/png" }, { "file": "lib/core/assets/mime-types/test.mem", "size": 0, "type": null }, { "file": "lib/core/assets/mime-types/test.res", "size": 0, "type": "application/x-dtbresource+xml" }, { "file": "lib/core/assets/mime-types/test.wasm", "size": 0, "type": "application/wasm" }, { "file": "lib/core/assets/mime-types/test.xod", "size": 0, "type": null }, { "file": "lib/core/assets/zoom-in.cur", "size": 3782, "type": null }, { "file": "lib/core/assets/zoom-out.cur", "size": 3782, "type": null }, { "file": "lib/core/AzurePartRetriever.chunk.js", "size": 760, "type": "application/javascript" }, { "file": "lib/core/CORSWorker.js", "size": 1309, "type": "application/javascript" }, { "file": "lib/core/DecryptWorker.js", "size": 13228, "type": "application/javascript" }, { "file": "lib/core/external/decode.min.js", "size": 153748, "type": "application/javascript" }, { "file": "lib/core/external/model-viewer-1.3.0.min.js", "size": 819146, "type": "application/javascript" }, { "file": "lib/core/external/model-viewer-legacy-1.3.0.min.js", "size": 1488122, "type": "application/javascript" }, { "file": "lib/core/external/pako_inflate.min.js", "size": 23156, "type": "application/javascript" }, { "file": "lib/core/external/pikaday.css", "size": 3397, "type": "text/css" }, { "file": "lib/core/external/Promise.js", "size": 8242, "type": "application/javascript" }, { "file": "lib/core/external/quill.css", "size": 562, "type": "text/css" }, { "file": "lib/core/ExternalAnnotationMerger.chunk.js", "size": 6637, "type": "application/javascript" }, { "file": "lib/core/ExternalPdfPartRetriever.chunk.js", "size": 2803, "type": "application/javascript" }, { "file": "lib/core/HttpPartRetriever.chunk.js", "size": 5928, "type": "application/javascript" }, { "file": "lib/core/IOSPartRetriever.chunk.js", "size": 1527, "type": "application/javascript" }, { "file": "lib/core/legacyOffice/LegacyOfficeWorker.js", "size": 20038, "type": "application/javascript" }, { "file": "lib/core/legacyOffice/WebB2XOfficeWorker.br.js.mem", "size": 1212568, "type": null }, { "file": "lib/core/legacyOffice/WebB2XOfficeWorker.br.mem", "size": 109904, "type": null }, { "file": "lib/core/legacyOffice/WebB2XOfficeWorker.gz.js.mem", "size": 2102497, "type": null }, { "file": "lib/core/legacyOffice/WebB2XOfficeWorker.gz.mem", "size": 131256, "type": null }, { "file": "lib/core/legacyOffice/WebB2XOfficeWorkerWasm.br.js.mem", "size": 22547, "type": null }, { "file": "lib/core/legacyOffice/WebB2XOfficeWorkerWasm.br.wasm", "size": 1086460, "type": "application/wasm" }, { "file": "lib/core/legacyOffice/WebB2XOfficeWorkerWasm.gz.js.mem", "size": 25128, "type": null }, { "file": "lib/core/legacyOffice/WebB2XOfficeWorkerWasm.gz.wasm", "size": 1758879, "type": "application/wasm" }, { "file": "lib/core/LocalPartRetriever.chunk.js", "size": 2168, "type": "application/javascript" }, { "file": "lib/core/LocalPdfPartRetriever.chunk.js", "size": 1566, "type": "application/javascript" }, { "file": "lib/core/office/OfficeWorker.js", "size": 34385, "type": "application/javascript" }, { "file": "lib/core/office/WebOfficeWorker.br.js.mem", "size": 2374792, "type": null }, { "file": "lib/core/office/WebOfficeWorker.br.mem", "size": 2830842, "type": null }, { "file": "lib/core/office/WebOfficeWorker.gz.js.mem", "size": 4130619, "type": null }, { "file": "lib/core/office/WebOfficeWorker.gz.mem", "size": 2900359, "type": null }, { "file": "lib/core/office/WebOfficeWorkerSubzero.nmf", "size": 136, "type": null }, { "file": "lib/core/office/WebOfficeWorkerWasm.br.js.mem", "size": 34997, "type": null }, { "file": "lib/core/office/WebOfficeWorkerWasm.br.wasm", "size": 4603028, "type": "application/wasm" }, { "file": "lib/core/office/WebOfficeWorkerWasm.gz.js.mem", "size": 39958, "type": null }, { "file": "lib/core/office/WebOfficeWorkerWasm.gz.wasm", "size": 5508227, "type": "application/wasm" }, { "file": "lib/core/pdf/full/PDFNetC.br.js.mem", "size": 4880914, "type": null }, { "file": "lib/core/pdf/full/PDFNetC.gz.js.mem", "size": 7766240, "type": null }, { "file": "lib/core/pdf/full/PDFNetC.gz.mem", "size": 1112558, "type": null }, { "file": "lib/core/pdf/full/PDFNetCWasm.br.js.mem", "size": 63363, "type": null }, { "file": "lib/core/pdf/full/PDFNetCWasm.br.wasm", "size": 4863738, "type": "application/wasm" }, { "file": "lib/core/pdf/full/PDFNetCWasm.gz.js.mem", "size": 77088, "type": null }, { "file": "lib/core/pdf/full/PDFNetThreadedWasm.br.js.mem", "size": 73679, "type": null }, { "file": "lib/core/pdf/full/PDFNetThreadedWasm.br.mem", "size": 936108, "type": null }, { "file": "lib/core/pdf/full/PDFNetThreadedWasm.br.wasm", "size": 3760021, "type": "application/wasm" }, { "file": "lib/core/pdf/full/PDFNetThreadedWasm.worker.js", "size": 3327, "type": "application/javascript" }, { "file": "lib/core/pdf/iframe.aspx", "size": 92, "type": null }, { "file": "lib/core/pdf/iframe.html", "size": 92, "type": "text/html" }, { "file": "lib/core/pdf/lean/PDFNetC.br.js.mem", "size": 2447427, "type": null }, { "file": "lib/core/pdf/lean/PDFNetC.gz.js.mem", "size": 3669461, "type": null }, { "file": "lib/core/pdf/lean/PDFNetC.gz.mem", "size": 285732, "type": null }, { "file": "lib/core/pdf/lean/PDFNetCWasm.br.js.mem", "size": 38491, "type": null }, { "file": "lib/core/pdf/lean/PDFNetCWasm.br.wasm", "size": 2172821, "type": "application/wasm" }, { "file": "lib/core/pdf/lean/PDFNetCWasm.gz.js.mem", "size": 44257, "type": null }, { "file": "lib/core/pdf/lean/PDFNetThreadedWasm.br.js.mem", "size": 46984, "type": null }, { "file": "lib/core/pdf/lean/PDFNetThreadedWasm.br.mem", "size": 232476, "type": null }, { "file": "lib/core/pdf/lean/PDFNetThreadedWasm.br.wasm", "size": 1928136, "type": "application/wasm" }, { "file": "lib/core/pdf/lean/PDFNetThreadedWasm.worker.js", "size": 3327, "type": "application/javascript" }, { "file": "lib/core/pdf/PDFNet.js", "size": 680900, "type": "application/javascript" }, { "file": "lib/core/pdf/PDFNet.prod.js", "size": 564554, "type": "application/javascript" }, { "file": "lib/core/pdf/pdfnet.res", "size": 1762214, "type": "application/x-dtbresource+xml" }, { "file": "lib/core/pdf/PDFworker.js", "size": 105780, "type": "application/javascript" }, { "file": "lib/core/pdf/ResizableWorker.js", "size": 187, "type": "application/javascript" }, { "file": "lib/core/pdf/simple_wasm/MemGrow.js", "size": 68138, "type": "application/javascript" }, { "file": "lib/core/pdf/simple_wasm/MemGrow.js.mem", "size": 4828, "type": null }, { "file": "lib/core/pdf/simple_wasm/MemGrow.wasm", "size": 40064, "type": "application/wasm" }, { "file": "lib/core/pdf/simple_wasm/MemGrow.worker.js", "size": 3327, "type": "application/javascript" }, { "file": "lib/core/pdf/WasmThread.js", "size": 16038, "type": "application/javascript" }, { "file": "lib/core/PDFInfoVersion1.chunk.js", "size": 7647, "type": "application/javascript" }, { "file": "lib/core/pikaday.chunk.js", "size": 16247, "type": "application/javascript" }, { "file": "lib/core/SelectionInfoOld.chunk.js", "size": 6859, "type": "application/javascript" }, { "file": "lib/core/StreamingPartRetriever.chunk.js", "size": 4610, "type": "application/javascript" }, { "file": "lib/core/vendors.ascii85.chunk.js", "size": 3006, "type": "application/javascript" }, { "file": "lib/core/vendors.ascii85.quill.chunk.js", "size": 16150, "type": "application/javascript" }, { "file": "lib/core/vendors.pako.chunk.js", "size": 38298, "type": "application/javascript" }, { "file": "lib/core/vendors.quill.chunk.js", "size": 215685, "type": "application/javascript" }, { "file": "lib/core/WebDBPartRetriever.chunk.js", "size": 744, "type": "application/javascript" }, { "file": "lib/core/webviewer-core.min.js", "size": 1254282, "type": "application/javascript" }, { "file": "lib/core/WebViewerServerPartRetriever.chunk.js", "size": 14020, "type": "application/javascript" }, { "file": "lib/core/WinRTPartRetriever.chunk.js", "size": 1183, "type": "application/javascript" }, { "file": "lib/core/Worker.js", "size": 61665, "type": "application/javascript" }, { "file": "lib/ui/assets/fonts/GreatVibes-Regular.woff", "size": 42888, "type": "font/woff" }, { "file": "lib/ui/assets/fonts/GreatVibes-Regular.woff2", "size": 28892, "type": "font/woff2" }, { "file": "lib/ui/assets/fonts/Lato-Bold.woff", "size": 36792, "type": "font/woff" }, { "file": "lib/ui/assets/fonts/Lato-BoldItalic.woff", "size": 39420, "type": "font/woff" }, { "file": "lib/ui/assets/fonts/Lato-Italic.woff", "size": 39148, "type": "font/woff" }, { "file": "lib/ui/assets/fonts/Lato-Regular.woff", "size": 37588, "type": "font/woff" }, { "file": "lib/ui/assets/pdftron.ico", "size": 15086, "type": "image/vnd.microsoft.icon" }, { "file": "lib/ui/chunks/10.chunk.js", "size": 1243, "type": "application/javascript" }, { "file": "lib/ui/chunks/100.chunk.js", "size": 1005, "type": "application/javascript" }, { "file": "lib/ui/chunks/101.chunk.js", "size": 1575, "type": "application/javascript" }, { "file": "lib/ui/chunks/102.chunk.js", "size": 1507, "type": "application/javascript" }, { "file": "lib/ui/chunks/103.chunk.js", "size": 1050, "type": "application/javascript" }, { "file": "lib/ui/chunks/104.chunk.js", "size": 1069, "type": "application/javascript" }, { "file": "lib/ui/chunks/105.chunk.js", "size": 990, "type": "application/javascript" }, { "file": "lib/ui/chunks/106.chunk.js", "size": 2156, "type": "application/javascript" }, { "file": "lib/ui/chunks/107.chunk.js", "size": 823, "type": "application/javascript" }, { "file": "lib/ui/chunks/108.chunk.js", "size": 1236, "type": "application/javascript" }, { "file": "lib/ui/chunks/109.chunk.js", "size": 1161, "type": "application/javascript" }, { "file": "lib/ui/chunks/11.chunk.js", "size": 1251, "type": "application/javascript" }, { "file": "lib/ui/chunks/110.chunk.js", "size": 1549, "type": "application/javascript" }, { "file": "lib/ui/chunks/111.chunk.js", "size": 1548, "type": "application/javascript" }, { "file": "lib/ui/chunks/112.chunk.js", "size": 977, "type": "application/javascript" }, { "file": "lib/ui/chunks/113.chunk.js", "size": 991, "type": "application/javascript" }, { "file": "lib/ui/chunks/114.chunk.js", "size": 2219, "type": "application/javascript" }, { "file": "lib/ui/chunks/115.chunk.js", "size": 1815, "type": "application/javascript" }, { "file": "lib/ui/chunks/116.chunk.js", "size": 1041, "type": "application/javascript" }, { "file": "lib/ui/chunks/117.chunk.js", "size": 1107, "type": "application/javascript" }, { "file": "lib/ui/chunks/118.chunk.js", "size": 1002, "type": "application/javascript" }, { "file": "lib/ui/chunks/119.chunk.js", "size": 1900, "type": "application/javascript" }, { "file": "lib/ui/chunks/12.chunk.js", "size": 1247, "type": "application/javascript" }, { "file": "lib/ui/chunks/120.chunk.js", "size": 1603, "type": "application/javascript" }, { "file": "lib/ui/chunks/121.chunk.js", "size": 986, "type": "application/javascript" }, { "file": "lib/ui/chunks/122.chunk.js", "size": 1197, "type": "application/javascript" }, { "file": "lib/ui/chunks/123.chunk.js", "size": 1561, "type": "application/javascript" }, { "file": "lib/ui/chunks/124.chunk.js", "size": 1004, "type": "application/javascript" }, { "file": "lib/ui/chunks/125.chunk.js", "size": 1015, "type": "application/javascript" }, { "file": "lib/ui/chunks/126.chunk.js", "size": 1078, "type": "application/javascript" }, { "file": "lib/ui/chunks/127.chunk.js", "size": 984, "type": "application/javascript" }, { "file": "lib/ui/chunks/128.chunk.js", "size": 834, "type": "application/javascript" }, { "file": "lib/ui/chunks/129.chunk.js", "size": 1077, "type": "application/javascript" }, { "file": "lib/ui/chunks/13.chunk.js", "size": 1513, "type": "application/javascript" }, { "file": "lib/ui/chunks/130.chunk.js", "size": 1677, "type": "application/javascript" }, { "file": "lib/ui/chunks/131.chunk.js", "size": 1381, "type": "application/javascript" }, { "file": "lib/ui/chunks/132.chunk.js", "size": 2077, "type": "application/javascript" }, { "file": "lib/ui/chunks/133.chunk.js", "size": 1228, "type": "application/javascript" }, { "file": "lib/ui/chunks/134.chunk.js", "size": 991, "type": "application/javascript" }, { "file": "lib/ui/chunks/135.chunk.js", "size": 1217, "type": "application/javascript" }, { "file": "lib/ui/chunks/136.chunk.js", "size": 1151, "type": "application/javascript" }, { "file": "lib/ui/chunks/137.chunk.js", "size": 1194, "type": "application/javascript" }, { "file": "lib/ui/chunks/138.chunk.js", "size": 1179, "type": "application/javascript" }, { "file": "lib/ui/chunks/139.chunk.js", "size": 1334, "type": "application/javascript" }, { "file": "lib/ui/chunks/14.chunk.js", "size": 1029, "type": "application/javascript" }, { "file": "lib/ui/chunks/140.chunk.js", "size": 1036, "type": "application/javascript" }, { "file": "lib/ui/chunks/141.chunk.js", "size": 1126, "type": "application/javascript" }, { "file": "lib/ui/chunks/142.chunk.js", "size": 1331, "type": "application/javascript" }, { "file": "lib/ui/chunks/15.chunk.js", "size": 1019, "type": "application/javascript" }, { "file": "lib/ui/chunks/16.chunk.js", "size": 1219, "type": "application/javascript" }, { "file": "lib/ui/chunks/17.chunk.js", "size": 957, "type": "application/javascript" }, { "file": "lib/ui/chunks/18.chunk.js", "size": 1109, "type": "application/javascript" }, { "file": "lib/ui/chunks/19.chunk.js", "size": 2006, "type": "application/javascript" }, { "file": "lib/ui/chunks/20.chunk.js", "size": 2209, "type": "application/javascript" }, { "file": "lib/ui/chunks/21.chunk.js", "size": 1337, "type": "application/javascript" }, { "file": "lib/ui/chunks/22.chunk.js", "size": 800, "type": "application/javascript" }, { "file": "lib/ui/chunks/23.chunk.js", "size": 1122, "type": "application/javascript" }, { "file": "lib/ui/chunks/24.chunk.js", "size": 1552, "type": "application/javascript" }, { "file": "lib/ui/chunks/25.chunk.js", "size": 1063, "type": "application/javascript" }, { "file": "lib/ui/chunks/26.chunk.js", "size": 997, "type": "application/javascript" }, { "file": "lib/ui/chunks/27.chunk.js", "size": 1021, "type": "application/javascript" }, { "file": "lib/ui/chunks/28.chunk.js", "size": 1028, "type": "application/javascript" }, { "file": "lib/ui/chunks/29.chunk.js", "size": 793, "type": "application/javascript" }, { "file": "lib/ui/chunks/30.chunk.js", "size": 1280, "type": "application/javascript" }, { "file": "lib/ui/chunks/31.chunk.js", "size": 1517, "type": "application/javascript" }, { "file": "lib/ui/chunks/32.chunk.js", "size": 1330, "type": "application/javascript" }, { "file": "lib/ui/chunks/33.chunk.js", "size": 980, "type": "application/javascript" }, { "file": "lib/ui/chunks/34.chunk.js", "size": 971, "type": "application/javascript" }, { "file": "lib/ui/chunks/35.chunk.js", "size": 1058, "type": "application/javascript" }, { "file": "lib/ui/chunks/36.chunk.js", "size": 975, "type": "application/javascript" }, { "file": "lib/ui/chunks/37.chunk.js", "size": 964, "type": "application/javascript" }, { "file": "lib/ui/chunks/38.chunk.js", "size": 1058, "type": "application/javascript" }, { "file": "lib/ui/chunks/39.chunk.js", "size": 1050, "type": "application/javascript" }, { "file": "lib/ui/chunks/4.chunk.js", "size": 226041, "type": "application/javascript" }, { "file": "lib/ui/chunks/40.chunk.js", "size": 976, "type": "application/javascript" }, { "file": "lib/ui/chunks/41.chunk.js", "size": 1058, "type": "application/javascript" }, { "file": "lib/ui/chunks/42.chunk.js", "size": 323, "type": "application/javascript" }, { "file": "lib/ui/chunks/43.chunk.js", "size": 1004, "type": "application/javascript" }, { "file": "lib/ui/chunks/44.chunk.js", "size": 1031, "type": "application/javascript" }, { "file": "lib/ui/chunks/45.chunk.js", "size": 1031, "type": "application/javascript" }, { "file": "lib/ui/chunks/46.chunk.js", "size": 1019, "type": "application/javascript" }, { "file": "lib/ui/chunks/47.chunk.js", "size": 1020, "type": "application/javascript" }, { "file": "lib/ui/chunks/48.chunk.js", "size": 1361, "type": "application/javascript" }, { "file": "lib/ui/chunks/49.chunk.js", "size": 1159, "type": "application/javascript" }, { "file": "lib/ui/chunks/5.chunk.js", "size": 983, "type": "application/javascript" }, { "file": "lib/ui/chunks/50.chunk.js", "size": 1252, "type": "application/javascript" }, { "file": "lib/ui/chunks/51.chunk.js", "size": 1711, "type": "application/javascript" }, { "file": "lib/ui/chunks/52.chunk.js", "size": 1024, "type": "application/javascript" }, { "file": "lib/ui/chunks/53.chunk.js", "size": 997, "type": "application/javascript" }, { "file": "lib/ui/chunks/54.chunk.js", "size": 1009, "type": "application/javascript" }, { "file": "lib/ui/chunks/55.chunk.js", "size": 1034, "type": "application/javascript" }, { "file": "lib/ui/chunks/56.chunk.js", "size": 1007, "type": "application/javascript" }, { "file": "lib/ui/chunks/57.chunk.js", "size": 1067, "type": "application/javascript" }, { "file": "lib/ui/chunks/58.chunk.js", "size": 1085, "type": "application/javascript" }, { "file": "lib/ui/chunks/59.chunk.js", "size": 827, "type": "application/javascript" }, { "file": "lib/ui/chunks/6.chunk.js", "size": 1321, "type": "application/javascript" }, { "file": "lib/ui/chunks/60.chunk.js", "size": 871, "type": "application/javascript" }, { "file": "lib/ui/chunks/61.chunk.js", "size": 1619, "type": "application/javascript" }, { "file": "lib/ui/chunks/62.chunk.js", "size": 1635, "type": "application/javascript" }, { "file": "lib/ui/chunks/63.chunk.js", "size": 1503, "type": "application/javascript" }, { "file": "lib/ui/chunks/64.chunk.js", "size": 1228, "type": "application/javascript" }, { "file": "lib/ui/chunks/65.chunk.js", "size": 952, "type": "application/javascript" }, { "file": "lib/ui/chunks/66.chunk.js", "size": 1493, "type": "application/javascript" }, { "file": "lib/ui/chunks/67.chunk.js", "size": 1289, "type": "application/javascript" }, { "file": "lib/ui/chunks/68.chunk.js", "size": 984, "type": "application/javascript" }, { "file": "lib/ui/chunks/69.chunk.js", "size": 842, "type": "application/javascript" }, { "file": "lib/ui/chunks/7.chunk.js", "size": 1250, "type": "application/javascript" }, { "file": "lib/ui/chunks/70.chunk.js", "size": 796, "type": "application/javascript" }, { "file": "lib/ui/chunks/71.chunk.js", "size": 994, "type": "application/javascript" }, { "file": "lib/ui/chunks/72.chunk.js", "size": 1114, "type": "application/javascript" }, { "file": "lib/ui/chunks/73.chunk.js", "size": 1014, "type": "application/javascript" }, { "file": "lib/ui/chunks/74.chunk.js", "size": 1548, "type": "application/javascript" }, { "file": "lib/ui/chunks/75.chunk.js", "size": 1238, "type": "application/javascript" }, { "file": "lib/ui/chunks/76.chunk.js", "size": 1457, "type": "application/javascript" }, { "file": "lib/ui/chunks/77.chunk.js", "size": 1651, "type": "application/javascript" }, { "file": "lib/ui/chunks/78.chunk.js", "size": 1136, "type": "application/javascript" }, { "file": "lib/ui/chunks/79.chunk.js", "size": 1509, "type": "application/javascript" }, { "file": "lib/ui/chunks/8.chunk.js", "size": 1230, "type": "application/javascript" }, { "file": "lib/ui/chunks/80.chunk.js", "size": 1236, "type": "application/javascript" }, { "file": "lib/ui/chunks/81.chunk.js", "size": 839, "type": "application/javascript" }, { "file": "lib/ui/chunks/82.chunk.js", "size": 1482, "type": "application/javascript" }, { "file": "lib/ui/chunks/83.chunk.js", "size": 1782, "type": "application/javascript" }, { "file": "lib/ui/chunks/84.chunk.js", "size": 1046, "type": "application/javascript" }, { "file": "lib/ui/chunks/85.chunk.js", "size": 795, "type": "application/javascript" }, { "file": "lib/ui/chunks/86.chunk.js", "size": 1067, "type": "application/javascript" }, { "file": "lib/ui/chunks/87.chunk.js", "size": 1219, "type": "application/javascript" }, { "file": "lib/ui/chunks/88.chunk.js", "size": 1741, "type": "application/javascript" }, { "file": "lib/ui/chunks/89.chunk.js", "size": 1331, "type": "application/javascript" }, { "file": "lib/ui/chunks/9.chunk.js", "size": 1052, "type": "application/javascript" }, { "file": "lib/ui/chunks/90.chunk.js", "size": 1289, "type": "application/javascript" }, { "file": "lib/ui/chunks/91.chunk.js", "size": 978, "type": "application/javascript" }, { "file": "lib/ui/chunks/92.chunk.js", "size": 963, "type": "application/javascript" }, { "file": "lib/ui/chunks/93.chunk.js", "size": 993, "type": "application/javascript" }, { "file": "lib/ui/chunks/94.chunk.js", "size": 1542, "type": "application/javascript" }, { "file": "lib/ui/chunks/95.chunk.js", "size": 1010, "type": "application/javascript" }, { "file": "lib/ui/chunks/96.chunk.js", "size": 1674, "type": "application/javascript" }, { "file": "lib/ui/chunks/97.chunk.js", "size": 1017, "type": "application/javascript" }, { "file": "lib/ui/chunks/98.chunk.js", "size": 1009, "type": "application/javascript" }, { "file": "lib/ui/chunks/99.chunk.js", "size": 1e3, "type": "application/javascript" }, { "file": "lib/ui/chunks/mention.chunk.css", "size": 1109, "type": "text/css" }, { "file": "lib/ui/chunks/mention.chunk.js", "size": 2588, "type": "application/javascript" }, { "file": "lib/ui/chunks/vendors.html2canvas.chunk.js", "size": 165443, "type": "application/javascript" }, { "file": "lib/ui/chunks/vendors.mention.chunk.js", "size": 56140, "type": "application/javascript" }, { "file": "lib/ui/configorigin.txt", "size": 153, "type": "text/plain" }, { "file": "lib/ui/i18n/translation-de.json", "size": 23523, "type": "application/json" }, { "file": "lib/ui/i18n/translation-en.json", "size": 21360, "type": "application/json" }, { "file": "lib/ui/i18n/translation-es.json", "size": 23283, "type": "application/json" }, { "file": "lib/ui/i18n/translation-fr.json", "size": 23669, "type": "application/json" }, { "file": "lib/ui/i18n/translation-it.json", "size": 23383, "type": "application/json" }, { "file": "lib/ui/i18n/translation-ja.json", "size": 25012, "type": "application/json" }, { "file": "lib/ui/i18n/translation-ko.json", "size": 23304, "type": "application/json" }, { "file": "lib/ui/i18n/translation-nl.json", "size": 23135, "type": "application/json" }, { "file": "lib/ui/i18n/translation-pt_br.json", "size": 23293, "type": "application/json" }, { "file": "lib/ui/i18n/translation-ru.json", "size": 30085, "type": "application/json" }, { "file": "lib/ui/i18n/translation-zh_cn.json", "size": 20788, "type": "application/json" }, { "file": "lib/ui/i18n/translation-zh_tw.json", "size": 20803, "type": "application/json" }, { "file": "lib/ui/index.aspx", "size": 579, "type": null }, { "file": "lib/ui/index.html", "size": 579, "type": "text/html" }, { "file": "lib/ui/style.css", "size": 227449, "type": "text/css" }, { "file": "lib/ui/webviewer-ui.min.js", "size": 2171420, "type": "application/javascript" }],
   layout: "src/routes/__layout.svelte",
-  error: "src/routes/__error.svelte",
+  error: ".svelte-kit/build/components/error.svelte",
   routes: [
     {
       type: "page",
       pattern: /^\/$/,
       params: empty,
       a: ["src/routes/__layout.svelte", "src/routes/index.svelte"],
-      b: ["src/routes/__error.svelte"]
+      b: [".svelte-kit/build/components/error.svelte"]
     },
     {
       type: "page",
       pattern: /^\/privacy-policy\/?$/,
       params: empty,
       a: ["src/routes/__layout.svelte", "src/routes/privacy-policy.svelte"],
-      b: ["src/routes/__error.svelte"]
+      b: [".svelte-kit/build/components/error.svelte"]
     },
     {
       type: "page",
       pattern: /^\/manufacture\/?$/,
       params: empty,
       a: ["src/routes/__layout.svelte", "src/routes/manufacture.svelte"],
-      b: ["src/routes/__error.svelte"]
+      b: [".svelte-kit/build/components/error.svelte"]
     },
     {
       type: "page",
       pattern: /^\/exhibition\/?$/,
       params: empty,
       a: ["src/routes/__layout.svelte", "src/routes/exhibition.svelte"],
-      b: ["src/routes/__error.svelte"]
+      b: [".svelte-kit/build/components/error.svelte"]
     },
     {
       type: "page",
       pattern: /^\/integrator\/?$/,
       params: empty,
       a: ["src/routes/__layout.svelte", "src/routes/integrator.svelte"],
-      b: ["src/routes/__error.svelte"]
+      b: [".svelte-kit/build/components/error.svelte"]
     },
     {
       type: "page",
       pattern: /^\/technical\/?$/,
       params: empty,
       a: ["src/routes/__layout.svelte", "src/routes/technical.svelte"],
-      b: ["src/routes/__error.svelte"]
+      b: [".svelte-kit/build/components/error.svelte"]
     },
     {
       type: "page",
       pattern: /^\/brochure\/?$/,
       params: empty,
       a: ["src/routes/__layout.svelte", "src/routes/brochure.svelte"],
-      b: ["src/routes/__error.svelte"]
+      b: [".svelte-kit/build/components/error.svelte"]
     },
     {
       type: "page",
       pattern: /^\/contact\/?$/,
       params: empty,
       a: ["src/routes/__layout.svelte", "src/routes/contact.svelte"],
-      b: ["src/routes/__error.svelte"]
+      b: [".svelte-kit/build/components/error.svelte"]
     },
     {
       type: "page",
       pattern: /^\/machine\/?$/,
       params: empty,
       a: ["src/routes/__layout.svelte", "src/routes/machine.svelte"],
-      b: ["src/routes/__error.svelte"]
+      b: [".svelte-kit/build/components/error.svelte"]
     },
     {
       type: "page",
       pattern: /^\/product\/?$/,
       params: empty,
       a: ["src/routes/__layout.svelte", "src/routes/product/index.svelte"],
-      b: ["src/routes/__error.svelte"]
+      b: [".svelte-kit/build/components/error.svelte"]
     },
     {
       type: "page",
       pattern: /^\/product\/netbiter\/?$/,
       params: empty,
       a: ["src/routes/__layout.svelte", "src/routes/product/netbiter.svelte"],
-      b: ["src/routes/__error.svelte"]
+      b: [".svelte-kit/build/components/error.svelte"]
     },
     {
       type: "page",
       pattern: /^\/product\/talktwom\/?$/,
       params: empty,
       a: ["src/routes/__layout.svelte", "src/routes/product/talktwom.svelte"],
-      b: ["src/routes/__error.svelte"]
+      b: [".svelte-kit/build/components/error.svelte"]
     },
     {
       type: "page",
       pattern: /^\/product\/flexy\/?$/,
       params: empty,
       a: ["src/routes/__layout.svelte", "src/routes/product/flexy.svelte"],
-      b: ["src/routes/__error.svelte"]
+      b: [".svelte-kit/build/components/error.svelte"]
     },
     {
       type: "page",
       pattern: /^\/product\/cosy\/?$/,
       params: empty,
       a: ["src/routes/__layout.svelte", "src/routes/product/cosy.svelte"],
-      b: ["src/routes/__error.svelte"]
+      b: [".svelte-kit/build/components/error.svelte"]
     },
     {
       type: "page",
       pattern: /^\/about\/?$/,
       params: empty,
       a: ["src/routes/__layout.svelte", "src/routes/about.svelte"],
-      b: ["src/routes/__error.svelte"]
+      b: [".svelte-kit/build/components/error.svelte"]
     },
     {
       type: "page",
@@ -24827,14 +24827,14 @@ var manifest = {
       pattern: /^\/blog\/?$/,
       params: empty,
       a: ["src/routes/__layout.svelte", "src/routes/blog/index.svelte"],
-      b: ["src/routes/__error.svelte"]
+      b: [".svelte-kit/build/components/error.svelte"]
     },
     {
       type: "page",
       pattern: /^\/case\/?$/,
       params: empty,
       a: ["src/routes/__layout.svelte", "src/routes/case.svelte"],
-      b: ["src/routes/__error.svelte"]
+      b: [".svelte-kit/build/components/error.svelte"]
     },
     {
       type: "page",
@@ -24848,7 +24848,7 @@ var manifest = {
       pattern: /^\/404\/?$/,
       params: empty,
       a: ["src/routes/__layout.svelte", "src/routes/404.svelte"],
-      b: ["src/routes/__error.svelte"]
+      b: [".svelte-kit/build/components/error.svelte"]
     }
   ]
 };
@@ -24862,8 +24862,8 @@ var module_lookup = {
   "src/routes/__layout.svelte": () => Promise.resolve().then(function() {
     return __layout;
   }),
-  "src/routes/__error.svelte": () => Promise.resolve().then(function() {
-    return __error;
+  ".svelte-kit/build/components/error.svelte": () => Promise.resolve().then(function() {
+    return error;
   }),
   "src/routes/index.svelte": () => Promise.resolve().then(function() {
     return index$6;
@@ -24950,7 +24950,7 @@ var module_lookup = {
     return _404$1;
   })
 };
-var metadata_lookup = { "src/routes/__layout.svelte": { "entry": "pages/__layout.svelte-d6acd838.js", "css": ["assets/pages/__layout.svelte-2a5c879e.css", "assets/vendor-025a9557.css"], "js": ["pages/__layout.svelte-d6acd838.js", "chunks/vendor-f4d47832.js", "chunks/stores-cbf80b60.js", "chunks/outside-2ec036ed.js"], "styles": [] }, "src/routes/__error.svelte": { "entry": "pages/__error.svelte-ea51f261.js", "css": ["assets/vendor-025a9557.css"], "js": ["pages/__error.svelte-ea51f261.js", "chunks/vendor-f4d47832.js"], "styles": [] }, "src/routes/index.svelte": { "entry": "pages/index.svelte-d1e512e6.js", "css": ["assets/vendor-025a9557.css"], "js": ["pages/index.svelte-d1e512e6.js", "chunks/vendor-f4d47832.js"], "styles": [] }, "src/routes/privacy-policy.svelte": { "entry": "pages/privacy-policy.svelte-0bdeac3e.js", "css": ["assets/vendor-025a9557.css"], "js": ["pages/privacy-policy.svelte-0bdeac3e.js", "chunks/vendor-f4d47832.js"], "styles": [] }, "src/routes/manufacture.svelte": { "entry": "pages/manufacture.svelte-78068978.js", "css": ["assets/vendor-025a9557.css"], "js": ["pages/manufacture.svelte-78068978.js", "chunks/vendor-f4d47832.js"], "styles": [] }, "src/routes/exhibition.svelte": { "entry": "pages/exhibition.svelte-5f8a281c.js", "css": ["assets/vendor-025a9557.css", "assets/Modal-4dc9c249.css"], "js": ["pages/exhibition.svelte-5f8a281c.js", "chunks/vendor-f4d47832.js", "chunks/Modal-941e8112.js", "chunks/outside-2ec036ed.js"], "styles": [] }, "src/routes/integrator.svelte": { "entry": "pages/integrator.svelte-c609cf11.js", "css": ["assets/vendor-025a9557.css"], "js": ["pages/integrator.svelte-c609cf11.js", "chunks/vendor-f4d47832.js"], "styles": [] }, "src/routes/technical.svelte": { "entry": "pages/technical.svelte-6af271ca.js", "css": ["assets/vendor-025a9557.css"], "js": ["pages/technical.svelte-6af271ca.js", "chunks/vendor-f4d47832.js"], "styles": [] }, "src/routes/brochure.svelte": { "entry": "pages/brochure.svelte-5d3e64e4.js", "css": ["assets/pages/brochure.svelte-9e9084b3.css", "assets/vendor-025a9557.css"], "js": ["pages/brochure.svelte-5d3e64e4.js", "chunks/vendor-f4d47832.js"], "styles": [] }, "src/routes/contact.svelte": { "entry": "pages/contact.svelte-3fb51112.js", "css": ["assets/pages/product/index.svelte-75b4ceb3.css", "assets/vendor-025a9557.css", "assets/Modal-4dc9c249.css"], "js": ["pages/contact.svelte-3fb51112.js", "chunks/vendor-f4d47832.js", "chunks/slide-ef0d1ca8.js", "chunks/Modal-941e8112.js", "chunks/outside-2ec036ed.js"], "styles": [] }, "src/routes/machine.svelte": { "entry": "pages/machine.svelte-dcc044b4.js", "css": ["assets/vendor-025a9557.css"], "js": ["pages/machine.svelte-dcc044b4.js", "chunks/vendor-f4d47832.js"], "styles": [] }, "src/routes/product/index.svelte": { "entry": "pages/product/index.svelte-fb690fe9.js", "css": ["assets/pages/product/index.svelte-75b4ceb3.css", "assets/vendor-025a9557.css"], "js": ["pages/product/index.svelte-fb690fe9.js", "chunks/vendor-f4d47832.js", "chunks/slide-ef0d1ca8.js"], "styles": [] }, "src/routes/product/netbiter.svelte": { "entry": "pages/product/netbiter.svelte-99673dee.js", "css": ["assets/vendor-025a9557.css"], "js": ["pages/product/netbiter.svelte-99673dee.js", "chunks/vendor-f4d47832.js"], "styles": [] }, "src/routes/product/talktwom.svelte": { "entry": "pages/product/talktwom.svelte-cfdc8c6b.js", "css": ["assets/vendor-025a9557.css"], "js": ["pages/product/talktwom.svelte-cfdc8c6b.js", "chunks/vendor-f4d47832.js"], "styles": [] }, "src/routes/product/flexy.svelte": { "entry": "pages/product/flexy.svelte-60fdc5f0.js", "css": ["assets/vendor-025a9557.css"], "js": ["pages/product/flexy.svelte-60fdc5f0.js", "chunks/vendor-f4d47832.js"], "styles": [] }, "src/routes/product/cosy.svelte": { "entry": "pages/product/cosy.svelte-3518fbdf.js", "css": ["assets/vendor-025a9557.css"], "js": ["pages/product/cosy.svelte-3518fbdf.js", "chunks/vendor-f4d47832.js"], "styles": [] }, "src/routes/about.svelte": { "entry": "pages/about.svelte-7be75363.js", "css": ["assets/vendor-025a9557.css"], "js": ["pages/about.svelte-7be75363.js", "chunks/vendor-f4d47832.js"], "styles": [] }, "src/routes/admin/__layout.reset.svelte": { "entry": "pages/admin/__layout.reset.svelte-7dc38cd5.js", "css": ["assets/pages/admin/__layout.reset.svelte-8157f754.css", "assets/app-dd440e0a.css", "assets/vendor-025a9557.css"], "js": ["pages/admin/__layout.reset.svelte-7dc38cd5.js", "chunks/vendor-f4d47832.js", "chunks/supabase-a5ee71c5.js", "chunks/stores-cbf80b60.js", "chunks/singletons-12a22614.js"], "styles": [] }, "src/routes/admin/index.svelte": { "entry": "pages/admin/index.svelte-124481c8.js", "css": ["assets/vendor-025a9557.css"], "js": ["pages/admin/index.svelte-124481c8.js", "chunks/vendor-f4d47832.js"], "styles": [] }, "src/routes/admin/device/index.svelte": { "entry": "pages/admin/device/index.svelte-36e26f64.js", "css": ["assets/pages/admin/device/index.svelte-75746cfc.css", "assets/vendor-025a9557.css"], "js": ["pages/admin/device/index.svelte-36e26f64.js", "chunks/vendor-f4d47832.js"], "styles": [] }, "src/routes/auth/__layout.reset.svelte": { "entry": "pages/auth/__layout.reset.svelte-7b33165e.js", "css": ["assets/app-dd440e0a.css", "assets/vendor-025a9557.css"], "js": ["pages/auth/__layout.reset.svelte-7b33165e.js", "chunks/vendor-f4d47832.js"], "styles": [] }, "src/routes/auth/index.svelte": { "entry": "pages/auth/index.svelte-a665763f.js", "css": ["assets/vendor-025a9557.css"], "js": ["pages/auth/index.svelte-a665763f.js", "chunks/vendor-f4d47832.js", "chunks/supabase-a5ee71c5.js"], "styles": [] }, "src/routes/auth/register.svelte": { "entry": "pages/auth/register.svelte-5618fc4c.js", "css": ["assets/vendor-025a9557.css"], "js": ["pages/auth/register.svelte-5618fc4c.js", "chunks/vendor-f4d47832.js", "chunks/supabase-a5ee71c5.js"], "styles": [] }, "src/routes/auth/magic.svelte": { "entry": "pages/auth/magic.svelte-2be2a413.js", "css": ["assets/vendor-025a9557.css"], "js": ["pages/auth/magic.svelte-2be2a413.js", "chunks/vendor-f4d47832.js", "chunks/supabase-a5ee71c5.js"], "styles": [] }, "src/routes/auth/reset.svelte": { "entry": "pages/auth/reset.svelte-39530f7e.js", "css": ["assets/vendor-025a9557.css"], "js": ["pages/auth/reset.svelte-39530f7e.js", "chunks/vendor-f4d47832.js", "chunks/supabase-a5ee71c5.js"], "styles": [] }, "src/routes/blog/index.svelte": { "entry": "pages/blog/index.svelte-e97faf27.js", "css": ["assets/vendor-025a9557.css"], "js": ["pages/blog/index.svelte-e97faf27.js", "chunks/vendor-f4d47832.js"], "styles": [] }, "src/routes/case.svelte": { "entry": "pages/case.svelte-aa09926e.js", "css": ["assets/pages/product/index.svelte-75b4ceb3.css", "assets/vendor-025a9557.css", "assets/Modal-4dc9c249.css"], "js": ["pages/case.svelte-aa09926e.js", "chunks/vendor-f4d47832.js", "chunks/Modal-941e8112.js", "chunks/outside-2ec036ed.js"], "styles": [] }, "src/routes/poll/__layout.reset.svelte": { "entry": "pages/poll/__layout.reset.svelte-6887f114.js", "css": ["assets/app-dd440e0a.css", "assets/vendor-025a9557.css"], "js": ["pages/poll/__layout.reset.svelte-6887f114.js", "chunks/vendor-f4d47832.js"], "styles": [] }, "src/routes/poll/index.svelte": { "entry": "pages/poll/index.svelte-294e9189.js", "css": ["assets/pages/poll/index.svelte-2cded7f7.css", "assets/vendor-025a9557.css"], "js": ["pages/poll/index.svelte-294e9189.js", "chunks/vendor-f4d47832.js", "chunks/supabase-a5ee71c5.js"], "styles": [] }, "src/routes/404.svelte": { "entry": "pages/404.svelte-50182b42.js", "css": ["assets/vendor-025a9557.css"], "js": ["pages/404.svelte-50182b42.js", "chunks/vendor-f4d47832.js"], "styles": [] } };
+var metadata_lookup = { "src/routes/__layout.svelte": { "entry": "pages/__layout.svelte-c94110d0.js", "css": ["assets/pages/__layout.svelte-667d3bba.css", "assets/vendor-025a9557.css"], "js": ["pages/__layout.svelte-c94110d0.js", "chunks/vendor-238e9390.js", "chunks/stores-abf7db3b.js", "chunks/outside-d80d1f68.js"], "styles": [] }, ".svelte-kit/build/components/error.svelte": { "entry": "error.svelte-a8647e2d.js", "css": ["assets/vendor-025a9557.css"], "js": ["error.svelte-a8647e2d.js", "chunks/vendor-238e9390.js"], "styles": [] }, "src/routes/index.svelte": { "entry": "pages/index.svelte-a52b0ae6.js", "css": ["assets/vendor-025a9557.css"], "js": ["pages/index.svelte-a52b0ae6.js", "chunks/vendor-238e9390.js"], "styles": [] }, "src/routes/privacy-policy.svelte": { "entry": "pages/privacy-policy.svelte-f72646b1.js", "css": ["assets/vendor-025a9557.css"], "js": ["pages/privacy-policy.svelte-f72646b1.js", "chunks/vendor-238e9390.js"], "styles": [] }, "src/routes/manufacture.svelte": { "entry": "pages/manufacture.svelte-8f06d23d.js", "css": ["assets/vendor-025a9557.css"], "js": ["pages/manufacture.svelte-8f06d23d.js", "chunks/vendor-238e9390.js"], "styles": [] }, "src/routes/exhibition.svelte": { "entry": "pages/exhibition.svelte-f6cbed9d.js", "css": ["assets/vendor-025a9557.css", "assets/Modal-4dc9c249.css"], "js": ["pages/exhibition.svelte-f6cbed9d.js", "chunks/vendor-238e9390.js", "chunks/Modal-9f1d5076.js", "chunks/outside-d80d1f68.js"], "styles": [] }, "src/routes/integrator.svelte": { "entry": "pages/integrator.svelte-36d88252.js", "css": ["assets/vendor-025a9557.css"], "js": ["pages/integrator.svelte-36d88252.js", "chunks/vendor-238e9390.js"], "styles": [] }, "src/routes/technical.svelte": { "entry": "pages/technical.svelte-0de9673d.js", "css": ["assets/vendor-025a9557.css"], "js": ["pages/technical.svelte-0de9673d.js", "chunks/vendor-238e9390.js"], "styles": [] }, "src/routes/brochure.svelte": { "entry": "pages/brochure.svelte-045ee2d3.js", "css": ["assets/pages/brochure.svelte-9e9084b3.css", "assets/vendor-025a9557.css"], "js": ["pages/brochure.svelte-045ee2d3.js", "chunks/vendor-238e9390.js"], "styles": [] }, "src/routes/contact.svelte": { "entry": "pages/contact.svelte-a9de0548.js", "css": ["assets/pages/product/index.svelte-75b4ceb3.css", "assets/vendor-025a9557.css", "assets/Modal-4dc9c249.css"], "js": ["pages/contact.svelte-a9de0548.js", "chunks/vendor-238e9390.js", "chunks/slide-ef0d1ca8.js", "chunks/Modal-9f1d5076.js", "chunks/outside-d80d1f68.js"], "styles": [] }, "src/routes/machine.svelte": { "entry": "pages/machine.svelte-9d981bb5.js", "css": ["assets/vendor-025a9557.css"], "js": ["pages/machine.svelte-9d981bb5.js", "chunks/vendor-238e9390.js"], "styles": [] }, "src/routes/product/index.svelte": { "entry": "pages/product/index.svelte-c36328e7.js", "css": ["assets/pages/product/index.svelte-75b4ceb3.css", "assets/vendor-025a9557.css"], "js": ["pages/product/index.svelte-c36328e7.js", "chunks/vendor-238e9390.js", "chunks/slide-ef0d1ca8.js"], "styles": [] }, "src/routes/product/netbiter.svelte": { "entry": "pages/product/netbiter.svelte-921ed51a.js", "css": ["assets/vendor-025a9557.css"], "js": ["pages/product/netbiter.svelte-921ed51a.js", "chunks/vendor-238e9390.js"], "styles": [] }, "src/routes/product/talktwom.svelte": { "entry": "pages/product/talktwom.svelte-23be2766.js", "css": ["assets/vendor-025a9557.css"], "js": ["pages/product/talktwom.svelte-23be2766.js", "chunks/vendor-238e9390.js"], "styles": [] }, "src/routes/product/flexy.svelte": { "entry": "pages/product/flexy.svelte-4489dc57.js", "css": ["assets/vendor-025a9557.css"], "js": ["pages/product/flexy.svelte-4489dc57.js", "chunks/vendor-238e9390.js"], "styles": [] }, "src/routes/product/cosy.svelte": { "entry": "pages/product/cosy.svelte-7aa0d66d.js", "css": ["assets/vendor-025a9557.css"], "js": ["pages/product/cosy.svelte-7aa0d66d.js", "chunks/vendor-238e9390.js"], "styles": [] }, "src/routes/about.svelte": { "entry": "pages/about.svelte-269c375d.js", "css": ["assets/vendor-025a9557.css"], "js": ["pages/about.svelte-269c375d.js", "chunks/vendor-238e9390.js"], "styles": [] }, "src/routes/admin/__layout.reset.svelte": { "entry": "pages/admin/__layout.reset.svelte-7b5bbd1b.js", "css": ["assets/pages/admin/__layout.reset.svelte-8157f754.css", "assets/app-7304c26f.css", "assets/vendor-025a9557.css"], "js": ["pages/admin/__layout.reset.svelte-7b5bbd1b.js", "chunks/vendor-238e9390.js", "chunks/supabase-c15a229e.js", "chunks/stores-abf7db3b.js", "chunks/singletons-12a22614.js"], "styles": [] }, "src/routes/admin/index.svelte": { "entry": "pages/admin/index.svelte-5feca423.js", "css": ["assets/vendor-025a9557.css"], "js": ["pages/admin/index.svelte-5feca423.js", "chunks/vendor-238e9390.js"], "styles": [] }, "src/routes/admin/device/index.svelte": { "entry": "pages/admin/device/index.svelte-ece6d781.js", "css": ["assets/pages/admin/device/index.svelte-75746cfc.css", "assets/vendor-025a9557.css"], "js": ["pages/admin/device/index.svelte-ece6d781.js", "chunks/vendor-238e9390.js"], "styles": [] }, "src/routes/auth/__layout.reset.svelte": { "entry": "pages/auth/__layout.reset.svelte-3af97427.js", "css": ["assets/app-7304c26f.css", "assets/vendor-025a9557.css"], "js": ["pages/auth/__layout.reset.svelte-3af97427.js", "chunks/vendor-238e9390.js"], "styles": [] }, "src/routes/auth/index.svelte": { "entry": "pages/auth/index.svelte-fb12b67a.js", "css": ["assets/vendor-025a9557.css"], "js": ["pages/auth/index.svelte-fb12b67a.js", "chunks/vendor-238e9390.js", "chunks/supabase-c15a229e.js"], "styles": [] }, "src/routes/auth/register.svelte": { "entry": "pages/auth/register.svelte-668b9c0a.js", "css": ["assets/vendor-025a9557.css"], "js": ["pages/auth/register.svelte-668b9c0a.js", "chunks/vendor-238e9390.js", "chunks/supabase-c15a229e.js"], "styles": [] }, "src/routes/auth/magic.svelte": { "entry": "pages/auth/magic.svelte-2244dd10.js", "css": ["assets/vendor-025a9557.css"], "js": ["pages/auth/magic.svelte-2244dd10.js", "chunks/vendor-238e9390.js", "chunks/supabase-c15a229e.js"], "styles": [] }, "src/routes/auth/reset.svelte": { "entry": "pages/auth/reset.svelte-2a34ee94.js", "css": ["assets/vendor-025a9557.css"], "js": ["pages/auth/reset.svelte-2a34ee94.js", "chunks/vendor-238e9390.js", "chunks/supabase-c15a229e.js"], "styles": [] }, "src/routes/blog/index.svelte": { "entry": "pages/blog/index.svelte-c0fc0ba2.js", "css": ["assets/vendor-025a9557.css"], "js": ["pages/blog/index.svelte-c0fc0ba2.js", "chunks/vendor-238e9390.js"], "styles": [] }, "src/routes/case.svelte": { "entry": "pages/case.svelte-5cf76003.js", "css": ["assets/pages/product/index.svelte-75b4ceb3.css", "assets/vendor-025a9557.css", "assets/Modal-4dc9c249.css"], "js": ["pages/case.svelte-5cf76003.js", "chunks/vendor-238e9390.js", "chunks/Modal-9f1d5076.js", "chunks/outside-d80d1f68.js"], "styles": [] }, "src/routes/poll/__layout.reset.svelte": { "entry": "pages/poll/__layout.reset.svelte-68fb767d.js", "css": ["assets/app-7304c26f.css", "assets/vendor-025a9557.css"], "js": ["pages/poll/__layout.reset.svelte-68fb767d.js", "chunks/vendor-238e9390.js"], "styles": [] }, "src/routes/poll/index.svelte": { "entry": "pages/poll/index.svelte-5d8d507c.js", "css": ["assets/pages/poll/index.svelte-2cded7f7.css", "assets/vendor-025a9557.css"], "js": ["pages/poll/index.svelte-5d8d507c.js", "chunks/vendor-238e9390.js", "chunks/supabase-c15a229e.js"], "styles": [] }, "src/routes/404.svelte": { "entry": "pages/404.svelte-b40cfcdd.js", "css": ["assets/vendor-025a9557.css"], "js": ["pages/404.svelte-b40cfcdd.js", "chunks/vendor-238e9390.js"], "styles": [] } };
 async function load_component(file) {
   const { entry, css: css2, js, styles } = metadata_lookup[file];
   return {
@@ -25896,7 +25896,7 @@ var navigating = {
     return store.subscribe(fn);
   }
 };
-var error = (verb) => {
+var error$1 = (verb) => {
   throw new Error(`Can only ${verb} session store in browser`);
 };
 var session = {
@@ -25904,8 +25904,8 @@ var session = {
     const store = getStores().session;
     return store.subscribe(fn);
   },
-  set: () => error("set"),
-  update: () => error("update")
+  set: () => error$1("set"),
+  update: () => error$1("update")
 };
 var css$b = {
   code: "a.active.svelte-dlfkqr{color:#f79216}",
@@ -26163,26 +26163,24 @@ var __layout = /* @__PURE__ */ Object.freeze({
 function load$1({ error: error2, status }) {
   return { props: { error: error2, status } };
 }
-var _error = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let { error: error2, status } = $$props;
-  if ($$props.error === void 0 && $$bindings.error && error2 !== void 0)
-    $$bindings.error(error2);
+var Error$1 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  let { status } = $$props;
+  let { error: error2 } = $$props;
   if ($$props.status === void 0 && $$bindings.status && status !== void 0)
     $$bindings.status(status);
-  return `${$$result.head += `${$$result.title = `<title>${escape2(status)} ${escape2(error2)} | Sanco Indonesia</title>`, ""}`, ""}
+  if ($$props.error === void 0 && $$bindings.error && error2 !== void 0)
+    $$bindings.error(error2);
+  return `<h1>${escape2(status)}</h1>
+<pre>${escape2(error2.message)}</pre>
 
 
-<main class="${"prose mx-auto py-8"}"><h1>${escape2(status)}</h1>
-	<pre>${escape2(error2.message)}</pre>
-	<p>If you expected something here, consider
-		<a href="${"https://github.com/GrygrFlzr/kit-docs/issues"}">filing an issue on GitHub</a>!
-	</p>
-	${``}</main>`;
+${error2.frame ? `<pre>${escape2(error2.frame)}</pre>` : ``}
+${error2.stack ? `<pre>${escape2(error2.stack)}</pre>` : ``}`;
 });
-var __error = /* @__PURE__ */ Object.freeze({
+var error = /* @__PURE__ */ Object.freeze({
   __proto__: null,
   [Symbol.toStringTag]: "Module",
-  "default": _error,
+  "default": Error$1,
   load: load$1
 });
 var SvelteSeo = create_ssr_component(($$result, $$props, $$bindings, slots) => {
