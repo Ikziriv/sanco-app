@@ -57,14 +57,7 @@ const config = {
 
 	kit: {
 		adapter: vercelAdapter(),
-		// hydrate the <div id="svelte"> element in src/app.html
 		target: '#svelte',
-		ssr: true,
-		amp: isAMP,
-		prerender: {
-			onError: 'fail',
-			entries: ['*'],
-		},
 		vite: () => ({
 			resolve: {
 				alias: {
