@@ -1,5 +1,5 @@
 {
-  "name": "svelte-supabase",
+  "name": "sanco-app",
   "version": "1.0.0",
   "author": {
     "name": "Ikziriv",
@@ -9,8 +9,6 @@
   "scripts": {
     "dev": "svelte-kit dev",
     "build": "svelte-kit build",
-    "preview:open": "npm run run preview --open",
-    "preview:host": "npm run run preview --host",
     "preview": "svelte-kit preview",
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
