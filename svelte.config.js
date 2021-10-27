@@ -62,8 +62,6 @@ const config = {
 		ssr: true,
 		amp: isAMP,
 		prerender: {
-			crawl: true,
-			enabled: true,
 			onError: 'fail',
 			entries: ['*'],
 		},
@@ -75,16 +73,6 @@ const config = {
 					$lib: resolve(__dirname, './src/lib'),
 					$stores: resolve(__dirname, './src/lib/stores'),
 				}
-			},
-			server: {
-				proxy: {
-					// '/service': 'http://134.209.212.127:3003',
-					// '/api': {
-					//     target: 'http://134.209.212.127:3003',
-					//     changeOrigin: true,
-					//     rewrite: (p) => p.replace(/^\/api/, '')
-					// }
-				},
 			},
 			plugins: [imagetools({ force: true })],
 		})
