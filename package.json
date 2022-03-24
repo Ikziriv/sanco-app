@@ -112,6 +112,7 @@
   },
   "dependencies": {
     "sharp": "^0.29.1",
+    "svelte-speedometer": "^1.1.0",
     "vercel": "^23.1.2"
   },
   "husky": {
