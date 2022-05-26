@@ -1,15 +1,3 @@
-<script context="module">
-	/**
-	 * @type {import('@sveltejs/kit').Load}
-	 */
-	export async function load({ page }) {
-		return {
-			props: {
-				path: page.path
-			}
-		};
-	}
-</script>
 
 <script lang="ts">
 	import { onMount } from 'svelte';

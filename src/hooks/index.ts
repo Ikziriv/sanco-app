@@ -10,13 +10,10 @@ export async function handle({ event, resolve }) {
 	const jwt = cookies.jwt && Buffer.from(cookies.jwt, 'base64').toString('utf-8');
     const loggedIn = cookies.jwt !== undefined || false;
     const theme = cookies.theme || 'dark';
+	
 	event.locals.user = jwt ? JSON.parse(jwt) : null;
 
-	return await resolve({
-        loggedIn,
-        theme,
-        event
-    });
+	return await resolve(event);
 }
 
 /** @type {import('@sveltejs/kit').GetSession} */

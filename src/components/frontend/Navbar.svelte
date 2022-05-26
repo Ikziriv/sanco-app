@@ -16,30 +16,30 @@
 <nav
 	class="md:ml-auto md:mr-auto block md:flex md:flex-wrap py-2 md:py-0 px-2 md:px-0 items-start md:items-center font-semibold text-base justify-start md:justify-center"
 >
-	<a sveltekit:prefetch class:active={$page.path === '/'} href="/" class="mr-5 hover:text-gray-900"
+	<a sveltekit:prefetch class:active={$page.url.pathname === '/'} href="/" class="mr-5 hover:text-gray-900"
 		>Home</a
 	>
 	<a
 		sveltekit:prefetch
-		class:active={$page.path === '/product'}
+		class:active={$page.url.pathname === '/product'}
 		href="/product"
 		class="mr-5 hover:text-gray-900">Product</a
 	>
 	<a
 		sveltekit:prefetch
-		class:active={$page.path === '/brochure'}
+		class:active={$page.url.pathname === '/brochure'}
 		href="/brochure"
 		class="mr-5 hover:text-gray-900">E-Brochure</a
 	>
 	<a
 		sveltekit:prefetch
-		class:active={$page.path === '/exhibition'}
+		class:active={$page.url.pathname === '/exhibition'}
 		href="/exhibition"
 		class="mr-5 hover:text-gray-900">Exhibition</a
 	>
 	<a
 		sveltekit:prefetch
-		class:active={$page.path === '/contact'}
+		class:active={$page.url.pathname === '/contact'}
 		href="/contact"
 		class="mr-5 hover:text-gray-900">Contact</a
 	>
